@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 영진직업전문학교</title>
+    <!-- 스타일링-->
+    <link rel="stylesheet" href="css/style_login.css">
+    </link>
+    <!-- 제이쿼리 연결-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 캐러셀 제이쿼리 플러그인 -->
+    <script src="js/jquery.bxslider.js"></script>
+    <!-- 캐러셀 스타일링 -->
+    <!-- <link rel="stylesheet" href="css/jquery.bxslider.css"> -->
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/b11e5da617.js" crossorigin="anonymous"></script>
+    
+    <!-- aos.js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- bxslider -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- company_bxslider.css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    
+    <!-- swiper js -->
+    <script src="./js/swiper-bundle.js"></script>
+    <!-- swiper css -->
+    <link rel="stylesheet" href="./css/swiper-bundle.css">
+
+    <!-- 캐러셀 구현을 위한 제이쿼리 플러그인 스크립트 소스 연결 -->
+    <script src="./js/jquery.bxslider22.js"></script>
+    <script src="./js/jquery.bxslider33.js"></script>
+    <script src="./js/jquery.bxslider44.js"></script>
+    <!-- 캐러셀 스크립트 : 토글 메뉴와 달리 스타일시트 링크도 필요함 -->
+    <link rel="stylesheet" href="css/jquery.bxslider22.css">
+    <link rel="stylesheet" href="css/jquery.bxslider33.css">
+    <link rel="stylesheet" href="css/jquery.bxslider44.css">
+</head>
+
+<body>
+    <header>
+        <!-- 모바일 타블렛 모드 헤더 -->
+        <div id="headerWrap">
+
+            <!-- 햄버거 메뉴버튼 -->
+            <div id="slideButton">
+                <a id="toggle" href="#">
+                    <span class="mid-line"></span>
+                    <span class="top-line"></span>
+                    <span class="bot-line"></span>                  
+                </a>    
+            </div>
+
+            <!-- 영진 로고 -->
+            <a href="../mainpage/MainPage_index.html"><div id="mainLogo"></div></a>
+
+            <!-- 전화걸기 아이콘 -->
+            <div id="topCall">
+                <a href="#">
+                    <svg version="1.1" id="call_but" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="0 0 55.3 55.3" style="enable-background:new 0 0 55.3 55.3;" xml:space="preserve">
+                    <path class="st0" d="M12.1,11.7c-1.5,0.9-2.5,2.4-2.6,4.1c-0.2,2.4,0.3,4.9,1.3,7.1c0,0,5.2,13.9,22.5,22.3c0.8,0.4,1.7,0.7,2.6,0.8
+                        c2.3,0.4,6.4,0.7,7.8-2l2-3.2c0.3-0.6,0.2-1.3-0.4-1.7l-7.8-5.3c-0.6-0.4-1.5-0.3-1.9,0.3l-2.2,2.8c-0.5,0.7-1.5,0.9-2.3,0.5
+                        c-3-1.6-9.5-6.6-12.7-12.6c-0.3-0.7-0.2-1.6,0.5-2.1l2.8-2.1c0.7-0.6,0.9-1.7,0.3-2.5l-5.1-7.3c-0.5-0.7-1.5-1-2.3-0.5L12.1,11.7z"
+                        />
+                    <path class="st0" d="M30.1,22.5c0,0,3.7,0.1,3.8,3.9"/>
+                    <path class="st0" d="M30.1,18.8c0,0,7.2-0.2,7.7,7.6"/>
+                    <path class="st0" d="M30.1,14.8c0,0,11.1,0.4,11.3,11.6"/>
+                    </svg>
+                </a>
+            </div>
+
+
+
+        <!-- 헤더 실행문 -->
+        <script>
+            window.addEventListener("scroll", function(){
+                var header = this.document.querySelector("#headerWrap");
+                const change_Color = this.document.querySelector("#headerWrap")
+                
+                header.classList.toggle("sticky", window.scrollY > 0)
+                change_Color.classList.toggle("changecolor", window.scrollY > 0);
+            });
+        </script>
+
+       <!-- 슬라이드 메뉴 -->
+       <nav>
+        <ul id="main_menu">
+            <li id="blank"><h3 id="greeting2" class="hidden"></h3></li>
+            <li><a href="#">모집과정</a>
+                <ul class="snd_menu sub_menu">
+                    <li><a href="#">- 모집중인 과정</a></li>
+                    <li><a href="login2.html">- 진행중인 과정</a>
+                    <li><a href="#">- 연간모집 과정</a>
+                </ul>
+            </li>
+            <li><a href="#">과정소개</a>
+                <ul class="snd_menu sub_menu">
+                    <div>
+                        <li><a href="#">- IT · SW</a></li>
+                        <li><a href="#">- 디자인</a></li>
+                        <li><a href="#">- 경영회계</a></li>
+                        <li><a href="#">- 조경 · 중장비</a></li>
+                        <li><a href="#">- 전기공사</a></li>
+                    </div>
+                    <div>
+                        <li><a href="#">- 기계설계</a></li>
+                        <li><a href="#">- 공조냉동</a></li>
+                        <li><a href="#">- 가구 · 공예</a></li>
+                        <li><a href="#">- 패션봉제</a></li>
+                        <li><a href="#">- 용접</a></li> 
+                    </div>    
+                </ul>
+            </li>
+            <li><a href="#">입학신청</a>
+                <ul class="snd_menu sub_menu">
+                    <li><a href="#">- 온라인 접수</a></li>
+                    <li><a href="#">- 입학상담</a></li>
+                    <li><a href="#">- 자주하는 질문</a></li>
+                    <li><a href="#">- 접수상태 확인</a></li>
+                    <li><a href="#">- 일반고 입학상담</a></li>
+                </ul>
+            </li>
+            <li><a href="#">국비지원안내</a>
+                <ul class="snd_menu sub_menu">
+                    <li><a href="#">- 국민내일배움카드</a></li>
+                    <li><a href="#">- 국민취업지원제도</a></li>
+                </ul>
+            </li>
+            <li><a href="#">취업지원</a>
+                <ul class="snd_menu sub_menu">
+                    <li><a href="#">- 채용소식</a></li>
+                    <li><a href="#">- 업무협력소식</a></li>
+                    <li><a href="#">- 취업센터소식</a></li>
+                    <li><a href="#">- 취업성공후기</a></li>
+                </ul>
+            </li>
+            <li><a href="#">커뮤니티</a>
+                <ul class="snd_menu sub_menu">
+                    <li><a href="#">- 포트폴리오</a></li>
+                    <li><a href="#">- 교내송암공모전</a></li>
+                    <li><a href="#">- 영진소식</a></li>
+                    <li><a href="#">- YJ재능 봉사단</a></li>
+                    <li><a href="#">- 학교에 바란다</a></li>
+                </ul>
+            </li>
+            <li><a href="#">학교소개</a>
+                <ul class="snd_menu sub_menu">
+                    <li><a href="#">- 인사말</a></li>
+                    <li><a href="#">- 조직도 및 연혁</a></li>
+                    <li><a href="#">- 교육시스템</a></li>
+                    <li><a href="#">- 교직원소개</a></li>
+                    <li><a href="#">- 시설안내</a></li>
+                    <li><a href="#">- 오시는 길</a></li>
+                    <li><a href="#">- 교수 채용</a></li>
+                </ul>
+            </li>
+            <li><a href="#">회원메뉴</a>
+                <ul class="snd_menu sub_menu">
+                    <li><a href="#">- 로그인</a></li>
+                    <li><a href="#">- NCS평가</a></li>
+                    <li><a href="#">- 설문조사</a></li>
+                    <li><a href="#">- 시험응시</a></li>
+                    <li><a href="#">- 경북산업직업전문학교 (자매학교)</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- 웹모드 헤더 -->
+<div id="webHeader">
+    <a href="../mainpage/index.html"><div id="webLogo"></div></a>  
+    <div id="webLogin">  
+        <ul>
+            <li id="greeting" class="hidden"></li>&nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a class="btn-open-popup">로그인&nbsp; | &nbsp;</a></li>
+            <li><a href="">NCS평가&nbsp; | &nbsp;</a></li>
+            <li><a href="">설문조사&nbsp; | &nbsp;</a></li>
+            <li><a href="">시험응시&nbsp; | &nbsp;</a></li>
+            <li><a href="http://www.kb.or.kr/"><div class="kbschool"></div></a></li>
+        </ul>
+    </div>    
+    <div id="webGnb">
+        <ul>
+            <li>
+                <a href="#">모집과정</a>
+                <ul class="lnb">
+                    <li><a href="#">모집중인 과정</a></li>
+                    <li><a href="login2.html">진행중인 과정</a></li>
+                    <li><a href="#">연간모집 과정</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">과정소개</a>
+                <ul class="lnb">
+                    <li><a href="#">IT·SW</a></li>
+                    <li><a href="#">디자인</a></li>
+                    <li><a href="#">경영회계</a></li>
+                    <li><a href="#">조경·중장비</a></li>
+                    <li><a href="#">전기공사</a></li>
+                    <li><a href="#">용접</a></li>
+                    <li><a href="#">기계설계</a></li>
+                    <li><a href="#">공조냉동</a></li>
+                    <li><a href="#">가구·공예</a></li>
+                    <li><a href="#">패션봉제</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">입학신청</a>
+                <ul class="lnb">
+                    <li><a href="#">온라인 접수</a></li>
+                    <li><a href="#">입학상담</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">접수상태 확인</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">국비지원</a>
+                <ul class="lnb">
+                    <li><a href="#">국민내일배움카드</a></li>
+                    <li><a href="#">국민취업지원제도</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">취업지원</a>
+                <ul class="lnb">
+                    <li><a href="#">채용소식</a></li>
+                    <li><a href="#">업무협력소식</a></li>
+                    <li><a href="#">취업센터소식</a></li>
+                    <li><a href="#">취업성공후기</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="lnb">
+                    <li><a href="#">포트폴리오</a></li>
+                    <li><a href="#">교내송암공모전</a></li>
+                    <li><a href="#">영진소식</a></li>
+                    <li><a href="#">YJ재능 봉사단</a></li>
+                    <li><a href="#">학교에 바란다</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">학교소개</a>
+                <ul class="lnb" id="lastlnb">
+                    <li><a href="#">인사말</a></li>
+                    <li><a href="#">조직도 및 연혁</a></li>
+                    <li><a href="#">교육시스템</a></li>
+                    <li><a href="#">교직원 소개</a></li>
+                    <li><a href="#">시설안내</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                    <li><a href="#">교수 채용</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+    </header>
+
+
+
+    <!-- =================================================본문================================================ -->
+    <section>
+
+<!-- 로그인 모달 -->
+<div class="modal hidden">
+    <div class="modal_body">
+        <img src="img/single_logo.png" alt="영진로고">
+        <div>
+            <fieldset>
+                <legend>로그인</legend>
+                <form class="login_box">
+                    <div>
+                        <input required maxlength="20"type="text" placeholder="아이디" value="" />
+                        <input required maxlength="20" type="password" placeholder="비밀번호" value="" />
+                    </div>
+                    <div>
+                        <input type="checkbox"> 로그인 유지                                
+                        <button id="loginBut">Login</button>
+                    </div>
+                    
+                </form>
+
+                
+                <div class="login_textbox">                
+                    <p><a href="#">회원가입</a> | <a href="#">아이디/비밀번호 찾기</a></p>
+    
+                    <a href="#"><img class="sns_login" src="img/google.png" alt="구글연결"></a>
+                    <a href="#"><img class="sns_login" src="img/kkot.png" alt="카카오톡연결"></a>
+                    <a href="#"><img class="sns_login" src="img/naver.png" alt="네이버연결"></a>
+                    <a href="#"><img class="sns_login" src="img/fb.png" alt="페이스북연결"></a>
+                </div>     
+            </fieldset>        
+        </div>
+    </div>
+</div>
+
+<script>
+    const body = document.querySelector('body');
+    const modal = document.querySelector('.modal');
+    const btnOpenPopup = document.querySelector('.btn-open-popup');
+
+    btnOpenPopup.addEventListener('click', (e) => {
+        modal.classList.toggle('show');
+
+        if (modal.classList.contains('show')) {
+            body.style.overflow = 'hidden';
+        }
+    });
+
+    modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.classList.toggle('show');
+
+    if (!modal.classList.contains('show')) {
+        body.style.overflow = 'auto';
+    }
+    }
+});
+
+const loginLi = document.querySelector(".btn-open-popup");
+const loginForm = document.querySelector(".login_box");
+const loginInput = document.querySelector(".login_box input"); // id = login_form 자식에 input
+const greeting = document.querySelector("#greeting");// id = greeting
+const greeting2 = document.querySelector("#greeting2");
+
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+function onLoginSubmit(event) { 
+    // event.preventDefault(); //기본동작을 막는다.
+    loginForm.classList.add(HIDDEN_CLASSNAME); //loginForm변수  (form을 숨김)
+    loginLi.classList.add(HIDDEN_CLASSNAME); //loginForm변수  (form을 숨김)
+    const username = loginInput.value;  // loginInput.value를 username 이라는 변수에 저장
+    localStorage.setItem(USERNAME_KEY, username);  // username 값을 username이라는 key 와 함께 local storage에 저장
+    paintGreetings(username); // paintGreetings 함수 호출
+}
+// &nbsp;&nbsp;
+function paintGreetings(username) { // 이함수는 username 이라는 인자를 하나 받고 있다.
+    greeting.innerText = `${username} 님 환영합니다`;  // h1 요소 안에  `Hello ${saveUsername}` 추가
+    greeting2.innerText = `${username} 님 환영합니다`;  // h1 요소 안에  `Hello ${saveUsername}` 추가
+    greeting.classList.remove(HIDDEN_CLASSNAME);  //id greeting인 곳에 class=hidden 이라는 클래스명 제거
+    greeting2.classList.remove(HIDDEN_CLASSNAME);  //id greeting인 곳에 class=hidden 이라는 클래스명 제거
+    loginLi.classList.add("hidden");
+}
+
+const saveUsername = localStorage.getItem(USERNAME_KEY);
+
+if(saveUsername === null ) {
+    loginLi.classList.remove(HIDDEN_CLASSNAME); //class에  hidden 제거
+    loginForm.classList.remove(HIDDEN_CLASSNAME); //class에  hidden 제거
+    loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+    paintGreetings(saveUsername);
+}
+</script>
+
+        <div id="detail">
+            <ul>
+                <li><a href="#">모집중인과정</a></li>
+                <li><a href="login2.html">진행중인과정</a></li>
+                <li><a href="#">연간모집과정</a></li>
+            </ul>
+            <div class="detail_subheader">
+                <p>>> Home > 모집과정 > 과정상세보기</p>
+            </div>
+            <div class="detail_header">
+                <h3>과정 상세보기</h3>
+            </div>
+        </div>
+
+        <div id="process">
+            <div class="process_header">
+                <h3>[K-Digitla Training]</h3>
+                <h2>Open API를 활용한<h2>
+                        <h2>스마트 웹 & 앱 콘텐츠</h2>
+                        <h2>실무 개발자 양성과정</h2>
+            </div>
+            <div class="process_img">
+                <img src="img/상세페이지_이미지/OPEN메인.svg" alt="">
+            </div>
+            <div class="process_content">
+                <div class="process_text">
+                    <h4>교육기간 : 2021. 12. 27 ~ 2022. 07. 21 </h4>
+                    <h4>교육시간 : 09:10 ~ 16:50 [월, 화, 수, 목, 금] </h4>
+                    <h4>모집인원 : 25명 </h4>
+                    <h4>수강료 : <span class="red">전액무료</span> (본인 부담금 없음)</h4>
+                    <div class="process_text_box">
+                        <h4>훈련수당 : <span class="blue">316,000원</span> (매달지급)</h4>
+                        <h4>(단, 국민취업지원제도 참여시</h4>
+                        <h4> 최대<span class="blue"> 600,000 ~ 816,000원</span>)</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="process_bnt">
+                <a href="#">수강신청</a>
+            </div>
+        </div>
+
+        <div id="business">
+            <div class="business_header">
+                <h1>디지털 핵심 실무인재 양성사업</h1>
+                <h1>K-Digital Training</h1>
+            </div>
+        </div>
+            <img id="bui1" src="img/상세페이지_이미지/KDIGITAL.png" alt="">
+        <div id="business2">
+            <div class="business_content2">
+                <div class="business_text">
+                    <p>K-Digital Training은 <span>고용노동부가 전담하여 청년 취업희망자를 대상으로 실무 프로젝트 중심의 교육을 제공</span>하여 디지털 신기술 훈련분야 현장
+                        프로젝트 수행 역량을 갖춘 실무인재를 양성하는 사업입니다. 본 과정을 통해
+                        <span>open API를 활용한 IT분야에서 스마트 웹&앱 콘텐츠 실무개발자를 양성하고 산업현장에서 바로 적용할 수 있는 능력을 갖출 수 있도록 지원</span>하고
+                        있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="develop">
+            <div class="develop_wrapper">
+                <div class="develop_header">
+                    <h1>Open API를 활용한 스마트 웹&앱</h1>
+                    <h1>콘텐츠 실무 개발자</h1>
+                </div>
+                <div class="develop_content">
+                    <div class="develop_box">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="aaa">
+                        <h3>디자인 능력과 코딩 능력 동시 배양</h3>
+                        </div>
+                    </div>
+                    <div class="develop_box">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="aaa">
+                        <h3>그래픽 기술을 활용한 UIㆍUX설계 및 디자인</h3>
+                    </div>
+                    <div class="develop_box">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="aaa">
+                        <h3>실무 능력 함양 및 포트폴리오 제작</h3>
+                        </div>
+                    </div>
+                    <div class="develop_box">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="aaa">
+                        <h3>현장에서 요구되는 프론트엔드 개발 핵심 기술 습득</h3>
+                        </div>
+                    </div>
+                    <div class="develop_box">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="aaa">
+                            <h3>Open API를 활용한 웹 & 앱 콘텐츠 개발 관련 실무 프로젝트 수행</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="develop_flex">
+                    <div class="develop_card"  data-aos="fade-right">
+                        <img src="img/상세페이지_이미지/콘텐츠 실무/1.svg" alt="">
+                        <div class="card_header">
+                            <h2>UX설계 / UI디자인</h2>
+                        </div>
+                        <div class="card_content">
+                            <h3>스토리보드 구상,<br />
+                                프로토타입 제작 등<br />
+                                UX 설계 및 그래픽<br />
+                                소프트웨어를 활용한 UI 디자인</h3>
+                        </div>
+                    </div>
+                    <div class="develop_card"  data-aos="fade-left">
+                        <img src="img/상세페이지_이미지/콘텐츠 실무/2.svg" alt="">
+                        <div class="card_header">
+                            <h2>웹퍼블리싱 및
+                                반응형 웹 개발</h2>
+                        </div>
+                        <div class="card_content">
+                            <h3>HTML5, CSS Javascript,<br />
+                                jQuery를 사용하여 웹 표준과<br />
+                                웹 전근성을 준수한<br />
+                                반응형 웹 사이트 개발 및 구현</h3>
+                        </div>
+                    </div>
+                    <div class="develop_card"  data-aos="fade-right">
+                        <img src="img/상세페이지_이미지/콘텐츠 실무/3.svg" alt="">
+                        <div class="card_header">
+                            <h2>리액트 프레임워크 및<br />
+                                프론트엔드 개발</h2>
+                        </div>
+                        <div class="card_content">
+                            <h3>자바스크립트 프레임워크<br />
+                                리액트(React)를 활용한<br />
+                                프론트엔드 개발</h3>
+                        </div>
+                    </div>
+                    <div class="develop_card"  data-aos="fade-left">
+                        <img src="img/상세페이지_이미지/콘텐츠 실무/4.svg" alt="">
+                        <div class="card_header">
+                            <h2>Open API활용 프로젝트</h2>
+                        </div>
+                        <div class="card_content">
+                            <h3>Open API를 활용한<br />
+                                웹 & 앱 콘텐츠 개발<br />
+                                실무프로젝트 수행</h3>
+                        </div>
+                    </div>
+                    <div class="develop_card"  data-aos="fade-right">
+                        <img src="img/상세페이지_이미지/콘텐츠 실무/5.svg" alt="">
+                        <div class="card_header">
+                            <h2>UX설계 / UI디자인</h2>
+                        </div>
+                        <div class="card_content">
+                            <h3>스토리보드 구상,<br />
+                                프로토타입 제작 등<br />
+                                UX 설계 및 그래픽<br />
+                                소프트웨어를 활용한 UI 디자인</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div id="timeline">
+            <div class="timeline_title">
+                <h1>Open API를 활용한 스마트 웹 & 앱 콘텐츠 <br/>실무 개발자 양성과정
+                    커리큘럼</h1>
+            </div>
+            <div class="timeline_wrapper">
+
+                <div class="timeline_box">
+                    <div class="box_circle"></div>
+                    <div class="box_header">
+                        <h3>01월차</h3>
+                        <p>(정규과정)</p>
+                    </div>
+                    <div class="box_content">
+                        <h3>ㆍ스마트문화앱 콘텐츠 설계</h3>
+                        <p>콘셉트 도출하기 / 스토리보드 작성하기/ 문화콘텐츠기획안 작성하기</p>
+                        <h3>ㆍ화면구현</h3>
+                        <p>UI 설계 검토 / UI 구현 표준 수립 / UI 구현하기</p>
+                        <h3>ㆍ반응형 웹 구현</h3>
+                        <p>웹 표준을 준수한 반응형 웹사이트 제작</p>
+                    </div>
+                </div>
+
+                <div class="timeline_box">
+                    <div class="box_circle"></div>
+                    <div class="box_header">
+                        <h3>02월차</h3>
+                        <p>(정규과정)</p>
+                    </div>
+                    <div class="box_content">
+                        <h3>ㆍ스마트문화앱 UI디자인</h3>
+                        <p>디자인 콘셉트 수립하기 / 시안디자인 제작하기 / 프로토타입 제작 및 사용성테스트</p>
+                        <h3>ㆍ반응형 웹 구현</h3>
+                        <p>웹 표준을 준수한 반응형 웹사이트 제작</p>
+                        <h3>ㆍ자바스크립트 & 제이쿼리</h3>
+                        <p>자바스크립트 기본 문법 / 제이쿼리 기본 다지기 / AJAX 활용하기</p>
+                    </div>
+                </div>
+
+                <div class="timeline_box">
+                    <div class="box_circle"></div>
+                    <div class="box_header">
+                        <h3>03월차</h3>
+                        <p>(정규과정)</p>
+                    </div>
+                    <div class="box_content">
+                        <h3>ㆍ스마트문화앱 UX 설계</h3>
+                        <p>UI 정보구조 설계하기 / 워크플로우 제작하기 / 내비게이션 설계하기</p>
+                        <h3>ㆍ자바스크립트 & 제이쿼리</h3>
+                        <p>자바스크립트 기본 문법 / 제이쿼리 기본 다지기 / AJAX 활용하기</p>
+                        <h3>ㆍOpen API& 공공데이터 활용</h3>
+                        <p>Open API를 연동한 공공데이터 활용 / 문화 콘텐츠 설계 및 UIㆍUX 디자인 / 운영체제(OS) 플랫폼에 따른 UI ㆍUX 구현</p>
+                    </div>
+                </div>
+
+                <div class="timeline_box">
+                    <div class="box_circle"></div>
+                    <div class="box_header">
+                        <h3>04월차</h3>
+                        <p>(정규과정)</p>
+                    </div>
+                    <div class="box_content">
+                        <h3>ㆍOpen API& 공공데이터 활용</h3>
+                        <p>Open API를 연동한 공공데이터 활용 / 문화 콘텐츠 설계 및 UIㆍUX 디자인 / 운영체제(OS) 플랫폼에 따른 UI ㆍUX 구현</p>
+                        <h3>ㆍ리엑트 프레임워크</h3>
+                        <p>리엑트 기본 문법 / 리액트 고급기술 익히기 / 리액트 실무 개발하기</p>
+                        <h3>ㆍ데이터 베이스</h3>
+                        <p>SQL 기초 / Mysql 활용 / Cross platform CB(MongoDB) 응용</p>
+                    </div>
+                </div>
+
+                <div class="timeline_box">
+                    <div class="box_circle"></div>
+                    <div class="box_header">
+                        <h3>05월차</h3>
+                        <p>(정규과정)</p>
+                    </div>
+                    <div class="box_content">
+                        <h3>ㆍ데이터 베이스</h3>
+                        <p>SQL 기초 / Mysql 활용 / Cross platform CB(MongoDB) 응용</p>
+                        <h3>ㆍ하이브리드앱 개발</h3>
+                        <p>서버 연동 하이브리드 앱 개발 (Javascript, PHP, mysql 활용)</p>
+                        <p class="qu">(프로젝트 Open API 활용)</p>
+                        <h3>ㆍSNS 마케팅 자동화 스마트 웹앱 콘텐츠 개발</h3>
+                        <p>(REST API, MVC 디자인 패턴, React)</p>
+                    </div>
+                </div>
+
+                <div class="timeline_box">
+                    <div class="box_circle"></div>
+                    <div class="box_header">
+                        <h3>06월차</h3>
+                        <p>(정규과정)</p>
+                    </div>
+                    <div class="box_content">
+                        <h3>ㆍOpen API 기술 적용 사례 분석</h3>
+                        <h3>ㆍ프로젝트 수행 / 작업결과물</h3>
+                        <p>(실제고객니즈기반)</p>
+                        <p class="qu">(프로젝트 Open API 활용)</p>
+                        <h3>ㆍSNS 마케팅 자동화 스마트 웹앱 콘텐츠 개발</h3>
+                        <p>(REST API, MVC 디자인 패턴, React)</p>
+                        <h3>ㆍGPS 인증 대구시민걷기 하이브리드 앱 개발</h3>
+                        <p>(GPS API, Node js, React)</p>
+                        <h3>ㆍ반응형 웹앱 SNS 연동 회원관리 시스템 개발</h3>
+                        <p>(REST API, 반응형 웹앱, PHP, Mysql)</p>
+                    </div>
+                </div>
+
+
+                <div class="timeline_box">
+                    <div class="box_circle"></div>
+                    <div class="box_header">
+                        <h3>07월차</h3>
+                        <p>(프로젝트 Open API 활용)</p>
+                    </div>
+                    <div class="box_content">
+                        <h3>ㆍ반응형 웹앱 SNS 연동 회원관리 시스템 개발</h3>
+                        <p>(REST API, 반응형 웹앱, PHP, Mysql)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline_card">
+                <div class="card_img">
+                    <div class="card_header">
+                        <p>수료 후부터 취업까지!</p>
+                        <p>실무중심 커리큘럼</p>
+                    </div>
+                    <div class="card_content">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <p>다양한 사용자 요구를 분석 후</p>
+                        <p>스마트기기 플랫폼 콘텐츠 제작</p>
+                    </div>
+                    <div class="card_content">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <p>본 과정 실무 중심 프로젝트를 통해</p>
+                        <p>현업에 대한 적응도 UP</p>
+                    </div>
+                    <div class="card_content">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <p>탄탄한 커리큘럼과 취업에 대한 아낌없는 지원</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <div id="carousel_wrapper">
+        <div id="carousel">
+            <div class="project_header">
+                <p>Open API를 활용한 프로젝트</p>
+            </div>
+            <div class="project_flex">
+                    <div class="project_content">
+                        <p>01. SNS 마케팅 자동화 스마트 웹앱 콘텐츠 개발</p>
+                        <div class="project_content2">
+                            <p>ㆍ접수용 반응형 웹 페이지 구현</p>
+                            <p>ㆍ데이터 분석 및 시각화</p>
+                            <p>ㆍ반응형 랜딩 페이지 제작</p>
+                        </div>
+                </div>
+                <div class="wrapper"> 
+
+                    <div class="bxslider22">
+                        <div>
+                            <img src="img/project/sns_1.png" alt="">
+                            <p>접수용 반응형 웹 페이지 구현</p>
+                        </div>
+                        <div>
+                            <img src="img/project/sns_2.png" alt="">
+                            <p>데이터 분석 및 시각화</p>
+                        </div>
+                        <div>
+                            <img src="img/project/sns_3.png" alt="">
+                            <p>반응형 랜딩 페이지 제작</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- 캐러셀 실행문 -->
+    <script>
+        $('.bxslider22').bxSlider({
+            auto: true,
+            autoHover: true,
+        });
+    </script>
+
+<div id="carousel">
+    <div class="project_flex">
+            <div class="project_content">
+                <p>02. 반응형 웹앱 SNS 연동 회원관리 시스템 개발</p>
+                <div class="project_content2">
+                    <p>ㆍ반응형 웹 앱 SNS연동 회원관리 시스템 개발</p>
+                    <p>ㆍOpen API를 활용한 SNS연동 회원관리 기술</p>
+                </div>
+            </div>
+        <div class="wrapper">
+            <div class="bxslider33">
+                <div>
+                    <img src="img/project/member_1.png" alt="">
+                    <p>반응형 웹 앱 SNS연동 회원관리 시스템 개발</p>
+                </div>
+                <div>
+                    <img src="img/project/member_2.png" alt="">
+                    <p>Open API를 활용한 SNS연동 회원관리 기술</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 캐러셀 실행문 -->
+<script>
+$('.bxslider33').bxSlider({
+    auto: true,
+    autoHover: true,
+});
+</script>
+
+
+<div id="carousel">
+    <div class="project_flex">
+        <div class="project_content">
+            <p>03. GPS 인증 대구시민걷기 하이브리드 앱 개발</p>
+            <div class="project_content2">
+                <p>ㆍGPS API를 활용한 하이브리드 앱 콘텐츠 개발</p>
+                <p>ㆍ서버 연동 사용자 및 관리자 모드 개발</p>
+            </div>
+        </div>
+        <div class="wrapper">
+
+            <div class="bxslider44">
+                <div>
+                    <img src="img/project/gps_1.png" alt="">
+                    <p>GPS API를 활용한 하이브리드 앱 콘텐츠 개발</p>
+                </div>
+                <div>
+                    <img src="img/project/gps_2.png" alt="">
+                    <p>서버 연동 사용자 및 관리자 모드 개발</p>
+                </div>
+                <div>
+                    <img src="img/project/gps_3.png" alt="">
+                    <p>서버 연동 사용자 및 관리자 모드 개발</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- 캐러셀 실행문 -->
+<script>
+$('.bxslider44').bxSlider({
+    auto: true,
+    autoHover: true,
+});
+</script>
+
+
+        <div id="company">
+            <h1>참여기업</h1>
+            <div class="bxslider">
+                <div class="company_img">
+                    <img src="img/상세페이지_이미지/협력업체 로고/로고PNG/IT여성기업인.png" alt="">
+                </div>
+                <div class="company_img">
+                    <img src="img/상세페이지_이미지/협력업체 로고/로고PNG/스페이스에듀.png" alt="">
+                </div>
+                <div class="company_img">
+                    <img src="img/상세페이지_이미지/협력업체 로고/로고PNG/신라시스템.png" alt="">
+                </div>
+                <div class="company_img">
+                    <img src="img/상세페이지_이미지/협력업체 로고/로고PNG/엔제이소프트.png" alt="">
+                </div>
+                <div class="company_img">
+                    <img src="img/상세페이지_이미지/협력업체 로고/로고PNG/올블랙.png" alt="">
+                </div>
+                <div class="company_img">
+                    <img src="img/상세페이지_이미지/협력업체 로고/로고PNG/이엠엘.png" alt="">
+                </div>
+                <div class="company_img">
+                    <img src="img/상세페이지_이미지/협력업체 로고/로고PNG/코딧.png" alt="">
+                </div>
+                <div class="company_img">
+                    <img src="img/상세페이지_이미지/협력업체 로고/로고PNG/퓨전소프트.png" alt="">
+                </div>
+                <div class="company_img">
+                    <img src="img/상세페이지_이미지/협력업체 로고/로고PNG/플래쉬21.png" alt="">
+                </div>
+                <div class="company_img">   
+                    <img src="img/상세페이지_이미지/협력업체 로고/로고PNG/한국알파시스템.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="professor">
+            <div class="professor_box">
+                <div class="professor_header">
+                    <h1>담당교수</h1>
+                </div>
+                <div class="swiper mySwiper1 professor_img">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class ="img1" src="img/상세페이지_이미지/교수/web_teacher1.png" alt=""></div>
+                        <div class="swiper-slide"><img class ="img2" src="img/상세페이지_이미지/교수/web_teacher2.png" alt=""></div>
+                        <div class="swiper-slide"><img class ="img3" src="img/상세페이지_이미지/교수/web_teacher3.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="aplication">
+            <div class="aplication_header">
+                <p>신청절차</p>
+            </div>
+            <div class="aplication_flex">
+                <div class="aplication_container">
+                    <div class="aplication_content">
+                        <h2>01</h2>
+                        <h3>훈련과정 상담 및
+                            입학원서 작성  </h3>
+                        <p>상담을 통해 참여 여부
+                            결정 후 입학원서를 작성</p>
+                    </div>
+                </div>
+
+                <div class="aplication_container">
+                    <div class="aplication_content">
+                        <h2>02</h2>
+                        <h3>국민내일배움카드
+                            신청  </h3>
+                        <p>온라인:www.hrd.go.kr</p>
+                        <p>오프라인:관할 고용센터</p>
+                    </div>
+                </div>
+
+                <div class="aplication_container">
+                    <div class="aplication_content">
+                        <h2>03</h2>
+                        <h3>과정 신청 및 승인</h3>
+                        <p>온라인:www.hrd.go.kr</p>
+                    </div>
+                </div>
+
+                <div class="aplication_container">
+                    <div class="aplication_content">
+                        <h2>04</h2>
+                        <h3>훈련과정 교육진행</h3>
+                        <p>국민내일배움카드 발급 후
+                            훈련에 참여해 교육수강</p>
+                    </div>
+                </div>
+
+                <div class="aplication_container">
+                    <div class="aplication_content">
+                        <h2>05</h2>
+                        <h3>훈련과정 수료</h3>
+                        <p>과정 종료 후 HRD-Net
+                            시스템에 수강평 입력 후
+                            과정 수료 마무리</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="info">
+            <div class="info_header">
+                <p>최우수 훈련기관 영진직업전문학교</p>
+                <p>NCS교육기준을 준수한 과정부터 1:1맞춤형 취업지원까지</p>
+            </div>
+            <div class="info_outflex">
+                <div class="info_card">
+                    <div class="info_card_header">
+                        <h3>최우수 훈련기관</h3>
+                    </div>
+                    <div class="info_flex">
+                        <div class="info_card_content">
+                            <p>최신시설, 최신 훈련장비, 우수한 교수진, 취업성과로 고용노동부 직업능력심사 평가원 인증 전국 최우수 훈련기관 선정</p>
+                        </div>
+                        <div class="info_card_img">
+                            <img src="img/상세페이지_이미지/최우수/edu_sys.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info_card">
+                    <div class="info_card_header">
+                        <h3>최신 장비 도입</h3>
+                    </div>
+                    <div class="info_flex">
+                        <div class="info_card_content">
+                            <p>쾌적한 훈련 환경과 최신 장비 도입으로 교육적 환경 우수</p>
+                        </div>
+                        <div class="info_card_img">
+                            <img src="img/상세페이지_이미지/최우수/최신장비.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info_card">
+                    <div class="info_card_header">
+                        <h3>1:1 취업매칭 서비스</h3>
+                    </div>
+                    <div class="info_flex">
+                        <div class="info_card_content">
+                            <p>교육생 특성을 고려한 1:1 맞춤 컨설팅을 통해 개인맞춤 구인구직 매칭 서비스 등토탈 솔루션 제공</p>
+                        </div>
+                        <div class="info_card_img">
+                            <img src="img/상세페이지_이미지/최우수/취업매칭.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info_card">
+                    <div class="info_card_header">
+                        <h3>훈련품질 우수성</h3>
+                    </div>
+                    <div class="info_flex">
+                        <div class="info_card_content">
+                            <p>체계적인 이수자 평가 시스템을 통해 NCS기반 교육훈련을 효과적, 효율적으로 운영 및 개선하여 A등급 획득 (47개 과정)</p>
+                        </div>
+                        <div class="info_card_img">
+                            <img src="img/상세페이지_이미지/최우수/ncs.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="system">
+            <div class="system_header">
+                <h1>1:1 맞춤형 취업지원 시스템</h1>
+                <p>교육훈련 종료 후, 오직 훈련생만을 위한 1:1 맞춤 면접코칭 실시</p>
+            </div>
+            <div class="system_flex">
+                
+                <div class="system_card">
+                    <div class="system_img">
+                        <img src="img/상세페이지_이미지/맞춤형 취업지원/1.svg" alt="">
+                    </div>
+                    <div class="system_content">
+                        <h3>취업지원 프로그램 소개</h3>
+                        <p>다양한 취업지원</p>
+                        <p>시스템을 지원받을 수 있도록</p>
+                        <p>취업지원센터 소개</p>
+                    </div>
+                </div>
+
+                <div class="system_card">
+                    <div class="system_img">
+                        <img src="img/상세페이지_이미지/맞춤형 취업지원/2.svg" alt="">
+                    </div>
+                    <div class="system_content">
+                        <h3>이력서 및 자소서 컨설팅</h3>
+                        <p>이력서 작성법 및</p>
+                        <p>자소서 컨설팅을 통한</p>
+                        <p>입사지원 분석</p>
+                    </div>
+                </div>
+
+                <div class="system_card">
+                    <div class="system_img">
+                        <img src="img/상세페이지_이미지/맞춤형 취업지원/3.svg" alt="">
+                    </div>
+                    <div class="system_content">
+                        <h3>1:1 모의 면접 실시</h3>
+                        <p>면접트레이닝 및</p>
+                        <p>이미지메이킹 서비스,</p>
+                        <p>동행면접 지원</p>
+                    </div>
+                </div>
+
+                <div class="system_card">
+                    <div class="system_img">
+                        <img src="img/상세페이지_이미지/맞춤형 취업지원/4.svg" alt="">
+                    </div>
+                    <div class="system_content">
+                        <h3>인재매칭 서비스</h3>
+                        <p>기업ㆍ기관ㆍ협회와</p>
+                        <p>MOU체결을 통해</p>
+                        <p>맞춤 인재매칭 서비스</p>
+                    </div>
+                </div>
+
+                <div class="system_card">
+                    <div class="system_img">
+                        <img src="img/상세페이지_이미지/맞춤형 취업지원/5.svg" alt="">
+                    </div>
+                    <div class="system_content">
+                        <h3>취업성공</h3>
+                        <p>성공적인 취업을 위한</p>
+                        <p>다양한 지원</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="list">
+            <div class="list_btn">
+                <a href="#"><p>목록</p></a>
+            </div>
+        </div>
+
+    </section>
+    <!-- 푸터 -->
+    <footer>
+        <div class="logo_footer"><img src="img/logo_w.png" alt="푸터영진로고"></div>
+        <div class="adress_footer">
+            <p>회사명 : 영진직업전문학교 &nbsp;&nbsp; 대표자 : 곽승호, 차영숙</p>
+            <p>Tel : 053-983-8877 &nbsp;&nbsp;Fax : 053-722-2423 </p>
+            <p>개인정보보호책임자 : 곽창운 &nbsp;&nbsp; Tel : 053-983-8877 </p>
+            <p>사업자번호 : 502-95-07029</p>
+            <p>701-835 대구광역시 동구 화랑로 525(용계동), 조경실습장 : 대구 동구 도동 806-21</p>
+            <p>copyright © 대구 국비지원 무료교육 영진직업전문학교. All Rights Reserved.</p>
+        </div>
+        <div class="sns_footer">
+            <a href="#"><img src="img/fb.png" alt="페이스북"></a>
+            <a href="#"><img src="img/kkot.png" alt="카카오톡"></a>
+            <a href="#"><img src="img/insta.png" alt="인스타그램"></a>
+            <a href="#"><img src="img/naver.png" alt="네이버"></a>
+        </div>
+    </footer>
+    
+    <div id="top">
+        <a href="#"><img id="chat_bot" src="img/kkot.png" alt="챗봇"></a><br />
+        <a href="#"><svg id="top_but" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="#000000"><path d="M24 0v24H0V0h24z" fill="none" opacity=".87"/><path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6 1.41-1.41zM6 6h2v12H6V6z"/>
+        </svg></a>
+    </div>
+
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

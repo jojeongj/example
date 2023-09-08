@@ -1,0 +1,104 @@
+/* ===슬라이드======================== */
+#slide_bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    transition: all .5s;
+}
+
+#slide{
+    position: fixed;
+    z-index: 999;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px#28363950;
+    text-align: right;
+    transform: translateX(-110%);
+    transition: all .5s;
+}
+
+#profile{
+    height: 200px;
+    padding: 30px 0 0 20px;
+    font-size: 22px;
+    text-align: left;
+}
+
+
+#slide h5{
+    font-weight: 100;
+    color: #7e7e7e;
+}
+
+
+#slide #close{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 40px 0;
+    cursor: pointer;
+}
+
+#slide img#pro_img{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.sd_detail_btn,
+.sd_main_menu{
+    width:100%;
+    height: 30px;
+    padding: 0 70px 0 20px;
+    margin: 5px 0;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sd_detail_btn span,
+.sd_main_menu span{
+    margin-top: 4px;
+    padding-left: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+}
+
+.sd_detail_menu ul{
+    font-size: 18px;
+    display: none;
+    padding:0 0 0 65px;
+    text-align: left;
+    transition: all .1s;
+}
+
+.sd_detail_menu ul a{
+    margin: 5px 0;
+}
+
+#slide hr{
+    margin: 10px 0;
+    border: 1px solid #F2F2F2;
+    color: #fff;
+}
+#devider_1{
+    margin: 140px 0 10px 0;
+}
+
+.sd_bnt_clicked{
+    color: #fff;
+    
+}
+
+.sd_bnt_clicked div{
+    background: #A6B8B4;
+}
+
+
+.sd_bnt_clicked img{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(37deg) brightness(106%) contrast(106%);
+}

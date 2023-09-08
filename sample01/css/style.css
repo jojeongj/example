@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* 100 300 400 500 700 900
+font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+/* 200 300 400 500 600 700 900 
+font-family: 'Noto Serif KR', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* 100 300 400 500 700 900
+font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+/* 400 500 600 700 800 900 
+font-family: 'Cinzel', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* 400 500 600 700 800
+font-family: 'EB Garamond', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+/* 400 500 600 700
+font-family: 'Rajdhani', sans-serif; */
+* { margin: 0; padding: 0; box-sizing: border-box; list-style: none;}
+html { scroll-behavior:smooth;  
+    font-family: 'Roboto', sans-serif;
+    color: #0f0f0f;
+    /* background: linear-gradient(#0f0f0f 60%, purple); */
+    background: whitesmoke;
+}
+a { text-decoration: none; color: rgb(187, 187, 187);}
+article { margin-bottom: 200px;}
+.br { display: none;}
+@media screen and (max-width: 990px) {
+    .br {display: block;}
+}
+.fontbold {
+    font-weight: bold;
+}
+.mainTitle {
+    text-align: center;
+    font-size: 20vmin;
+    font-family: 'Cinzel', serif;
+}
+.hidden {
+    display: none;
+}
+
+/* --------------------------------------- 0. 상단메뉴 */
+nav {
+    position: fixed;
+    top: 0;
+    padding-top: 50px;
+    width: 100%;
+    z-index: 50;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+}
+nav:hover {            
+    background: whitesmoke;
+}
+nav.upup {
+    color: #0f0f0f;
+    padding-top: 10px;
+    background-color: whitesmoke;  
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.132);
+}
+nav ul {
+    /* border: 1px solid red; */
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav li {
+    /* border: 1px solid blue; */
+    height: 30px;
+    margin-bottom: 5px;
+}
+.menuBtn {
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.3s;
+}
+.menuBtn.underline {
+    background-image: linear-gradient(transparent 90%, #ff6f64 10%);
+}
+.menuBtn:hover {
+    background-size: 100% 100%;
+    color: #ff6f64;
+    /* font-weight: bold; */
+}
+#mobileNav {
+    /* border: 1px solid red; */
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.132);
+    height: 60px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: whitesmoke;    
+}
+#mobileNav ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+}
+#mobileNav svg {
+    fill: #0f0f0f98;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        display: none;
+    }
+    #mobileNav {
+        display: block;
+    }
+}
+
+/* --------------------------------------- 1. 메인 슬라이드 */
+#mainSlide {
+    overflow: hidden;
+    position: relative;
+}
+.image-slider {
+    z-index: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+.image-slide {
+    height: 100vh;
+    margin: 0 auto;
+}
+.slick-slide.slick-center {
+    transform: scale(1.2);
+    transition: transform .8s 1.4s cubic-bezier(.84, 0, .08, .99);
+}
+.slick-slide {
+    transition: transform .7s cubic-bezier(.84, 0, .08, .99);
+}
+.slider-control {
+    margin: 0%;
+    position: absolute;
+    z-index: 2;
+    bottom: 6%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.slideBtn {
+    background: none;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 0.4em;
+    display: inline-block;
+}
+.slideBtn svg {
+    fill: #0f0f0fb7;
+}
+.slideBtn:focus {
+    outline: none;
+}
+.block-1 {
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 5%;
+    left: 0%;
+    background: whitesmoke;
+}
+.block-2 {
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 25%;
+    left: 25%;
+    background: whitesmoke;
+}
+.block-3 {
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 5%;
+    right: 0%;
+    background: whitesmoke;
+}
+.overlay {
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 21%;
+    left: 5%;
+    background: rgba(245, 245, 245, 0.65);
+}
+.text-slider-wrapper {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+.text-slider {
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+}
+.text-slide h1 {
+    color: #0f0f0f;
+    font-size: 70px;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+    font-family: 'Cinzel', serif;
+    padding-left: 10%;
+    text-shadow: 2px 2px 2px whitesmoke;
+}
+.text-slide h1.design_tool span {               
+    border: 1px solid #0f0f0fb7;
+    color: #0f0f0fa3;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.5em;
+    text-align: center;
+    margin-right: 18px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.text-slide h1.pub_tool span {               
+    color: #0f0f0fb7;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.5em;
+    text-align: center;
+
+    display: inline-block;
+
+}
+@media(max-width: 990px) {
+    .block-2, .overlay {
+        display: none;
+    }
+    .block-1 {
+        width: 50%;
+    }
+    .block-3 {
+        width: 12%;
+    }
+    .slide-slick {
+        display: none !important;
+    }
+    .text-slide h1 {
+        font-size: 30px !important;
+    }
+    .text-slide h1.design_tool span {
+        width: 30px;
+        height: 30px;
+    }
+    .text-slider-wrapper {
+        position: absolute;
+        top: 50% !important;
+    }
+    .slider-control {
+        left: 30%;
+    }
+}
+
+/* --------------------------------------- 2. 소개 */
+#introduction {
+    padding: 15px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.introText {
+    /* border: 1px solid red; */
+    width: 60%;
+    margin-bottom: 200px;
+    /* font-family: 'EB Garamond', serif; */
+}
+
+@media screen and (max-width: 990px) {
+    .introText {
+        width: 100%;
+    }
+}
+
+
+
+.introBox {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.textInBox {
+    border-top: 2px solid #ff6f64;
+    width: 300px;
+    height: 220px;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.numbers {
+    position: absolute;
+    top: -52px;
+    text-align:center;
+    color: white;
+    font-size: 1.5em;
+    border-radius:  50%;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+}
+.num1, .num2, .num3 {
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    border: 1px solid #ff6f64;
+    background: #ff6f64;
+    font-size: 2.5em;
+    padding-top: 3px;
+}
+
+.textInBox p:nth-of-type(1) {
+    margin-bottom: 20px;
+}
+
+/* 사용언어, 사용툴 그래프 */
+.useSth {
+    width: 250px;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+}
+.useName {
+    border-right: 1px solid rgb(0, 0, 0);
+    width: 35%;
+    margin-left: 0;
+}
+.graphBar {
+    height: 10px;    
+    width: 65%;
+}
+.graph1, .graph2 {
+    border-radius: 0 10px 10px 0;
+    margin-left: 0;
+    height: 100%;
+    /* border: 1px solid #2D1C41; */
+    border-left: 0px;
+    background: #0f0f0fba;
+}
+
+.graphHTML, .graphCSS, .graphVS, .graphXd {
+    width: 150px;
+}
+.graphJS, .graphPs, .graphAi {
+    width: 120px;
+}
+
+@media screen and (max-width: 800px) {
+    .introMemo {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .textInBox {
+        width: 100%;
+    }
+}
+
+/* --------------------------------------- 3. 프로젝트 */
+#project {
+    padding: 15px;
+    padding-top: 80px;
+}
+.projectMenu {
+    text-align: center;
+    margin: 40px auto 80px auto;
+    word-spacing: 20px;
+    cursor: pointer;
+}
+
+.cardWrapper {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    /* border: 1px solid blue; */
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* 포트폴리오 박스 hover 이벤트*/
+.portfolio {
+    /* border: 1px solid red; */
+    background: white;
+    box-shadow: 0 3px 2px rgba(43, 43, 43, 0.056);
+    width: 570px;
+    /* height: 550px; */
+    margin: 1%;
+    margin-bottom: 4%;
+
+    position: relative;
+    overflow: hidden;
+}
+.pfImg {
+    background: whitesmoke;
+    width: 100%;
+    height: 350px;
+}
+.pfText {
+    /* border: 1px solid green; */
+    background: white;
+    padding: 20px;
+    width: 100%;
+    height: 320px;
+    line-height: 1.65em;
+    position: relative;
+}
+@media screen and (max-width: 800px) {
+    .pfText {
+        height: fit-content;
+        padding-bottom: 100px;
+    }
+}
+.pfText p:first-child {
+    margin-bottom: 10px;
+}
+.fontSmall {
+    font-size: 0.8em;
+}
+.buttonWrap {
+    text-align: right;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.pfText button {
+    background: #0f0f0f;
+    color: whitesmoke;
+    padding: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+/* ----------- 포폴 이미지 */
+.junixImg {
+    background: url('../files/port04_junix.png') center ;
+    background-size: cover;
+}
+.yjImg {
+    background: url('../files/port03_yj.png') center ;
+    background-size: cover;
+}
+.musicApp {
+    background: url('../files/port01_musicapp.png') center ;
+    background-size: cover;
+}
+.iceHome {
+    background: url('../files/port02_icehome.png') center ;
+    background-size: cover;
+}
+.aniImg {
+    background: url('../files/port05_ani.png') center ;
+    background-size: cover;
+}
+.godiImg {
+    background: url('../files/port06_godiva.png') center ;
+    background-size: cover;
+}
+.ecoImg {
+    background: url('../files/port07_ecoce.png') center;
+    background-size: cover;
+}
+.chaImg {
+    background: url('../files/port08_cha.png') center;
+    background-size: cover;
+}
+
+
+/* --------------------------------------- 4.컨택트 */
+#contact {
+    padding: 15px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.businessCard {
+    background: url('https://www.prems.work/userfiles/tr01sibrand.nl/images/businesscardbg.jpg') center;
+    background-size: cover;
+    box-shadow: 3px  3px 3px 3px #0f0f0f2f;
+    text-shadow: 1px 1px 1px #0f0f0f2f;
+    width: 420px;
+    height: 250px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    position: relative;
+}
+.businessCardEnglish, .businessCardKorea {
+    position: absolute;
+    width: 300px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%);    
+}
+.phone_email {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -40%);    
+}
+ .name {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+.phone, .email {
+    font-size: 1.3em;
+}
+.businessCardKorea {
+    /* font-family: 'Roboto', sans-serif; */
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+.businessCard:hover .businessCardEnglish {
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+.businessCard:hover .businessCardKorea {
+    visibility: visible;
+    opacity: 0.8;
+    transition: .3s;
+}
+@media(max-width: 500px) {
+    .businessCard {
+        width: 300px;
+    }
+}
+
+
+/* --------------------------------------- 5.푸터 */
+footer {
+    text-align: center;
+    height: 80px;
+    color: #0f0f0f50;
+}
+@media screen and (max-width: 800px) {
+    footer {
+        margin-bottom: 80px;
+    }
+}
+#topBtn {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    background: rgba(128, 128, 128, 0.185);
+    border-radius: 10px;
+}
+#topBtn svg {
+    transform: rotate(180deg);
+    fill: gray;
+}

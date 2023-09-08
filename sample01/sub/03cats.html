@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>냥냥이 스티커</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .backBtn {
+            position: fixed;
+            cursor: pointer;
+            width: fit-content;
+        }
+        .backBtn svg {
+            transform: rotate(90deg);
+            animation: backback 1s ease-in-out alternate infinite;
+        }
+        @keyframes backback {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(10px);
+            }
+        }
+        .flex {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        .imgBox {
+            max-width: 1300px;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="backBtn" onclick="history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M24 40 8 24 24 8l2.1 2.1-12.4 12.4H40v3H13.7l12.4 12.4Z"/></svg>
+    </div> -->
+    <div class="flex">
+        <div class="imgBox">
+            <img src="../files/img11_cat.png">
+        </div>
+    </div>
+    
+
+
+
+</body>
+</html>

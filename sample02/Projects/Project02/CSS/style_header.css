@@ -1,0 +1,124 @@
+/* ===헤더======================== */
+header{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 990;
+    transition: top 0.5s;
+	box-shadow: 0px 1px 20px rgba(0,0,0,0.2);
+}
+
+header #gnb{
+    height: 45px;
+}
+
+header #gnb a{
+    width: 45px;
+    height: 45px;
+    float: left;
+    padding: 15px 10px;
+    position: relative;
+}
+
+header #gnb a span{
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+}
+
+header #gnb a span::before{
+    top: 5px;
+    left: 0px;
+    content: " ";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+}
+
+header #gnb a span::after{
+    top: 10px;
+    left: 0px;
+    content: " ";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+}
+
+header #gnb a span:hover,
+header #gnb a span:hover::before,
+header #gnb a span:hover::after{
+    cursor: pointer;
+}
+
+header #gnb h1{
+    font-family: 'MinSans-Thin';
+    font-weight: 100;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header nav{
+    height: 40px;
+    background-color: #283639;
+}
+
+header nav ul{
+    display: flex;
+    line-height: 40px;
+    justify-content: space-around;
+}
+
+header nav ul a{
+    font-family: 'MinSans-Light';
+    background: #283639;
+    color: #fff;
+    transition: all .5s;
+}
+
+header nav ul a:hover{
+    color: #B38A5E;
+    transition: all .5s;
+}
+
+@media only screen and (min-width:1300px){
+
+    header{
+        top: -100px;
+        font-family: 'MinSans-Thin';
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        border-bottom: 1px solid #000;
+    }
+
+    header #gnb #hamburger{
+        display: none;
+    }
+
+    header nav{
+        background-color: #fff;
+    }
+
+    header nav ul a{
+        background: #fff;
+        color: #283639;
+        font-size: 25px;
+        font-weight: 100;
+    }
+
+    header nav ul li::after{
+        content: "|";
+        font-family: 'MinSans-Thin';
+        font-size: 25px;
+        font-weight: 100;
+        margin: 0 40px;
+    }
+
+    header nav ul li:last-child::after{
+        content: " ";
+    }
+
+}

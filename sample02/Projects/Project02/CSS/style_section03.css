@@ -1,0 +1,283 @@
+    /* 섹션 3: 프로덕트 */
+    
+    #section3 #sc3_title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2em;
+        font-weight: 100;
+        margin-bottom: 50px;
+    }
+
+    #section3 hr{
+        width: 20%;
+        margin: 100px auto;
+        height: 3px;
+        color: gray;
+        background-color: rgb(155, 155, 155);
+    }
+
+    /* 탭 전체 스타일 */
+    .tabs {
+        padding-bottom: 40px;
+        background-color: #ffffff;
+        width: 100%;
+    }
+    
+    /* 탭 스타일 */
+    .tab_item {
+        width: calc(100%/4);
+        height: 80px;
+        background-color: #fff;
+        line-height: 80px;
+        font-size: 30px;
+        text-align: center;
+        color: #333333;
+        display: block;
+        float: left;
+        text-align: center;
+        font-weight: bold; 
+        transition: all 0.2s ease;
+    }
+
+
+    .tab_item:hover {
+        opacity: 0.75;
+    }
+    
+    /* 라디오 버튼 UI삭제*/
+    input[name="tab_item"] {
+        display: none;
+    }
+    
+    /* 탭 컨텐츠 스타일 */
+    .tab_content {
+        display: none;
+        clear: both;
+        overflow: hidden;
+    }
+    
+    
+    /* 선택 된 탭 콘텐츠를 표시 */
+    #chair:checked ~ #chair_content,
+    #table:checked ~ #table_content,
+    #bed:checked ~ #bed_content,
+    #int:checked ~ #int_content{ 
+        display: block;
+    }
+        
+    /* 선택된 탭 스타일 */
+        .tabs input:checked + .tab_item {
+        background-color: #fff;
+        color: #B38A5E;
+        border-bottom: 3px solid #B38A5E;
+        }
+
+        .contents_cover{
+        margin-top: 50px;
+        height: 200px;
+        background-image: url(../IMG/detailshot/furniture_detail\ \(6\).png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        }
+
+        /* 섹션 3 탭 메뉴 구성 */
+        .sc3_tab{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+
+        }
+
+        /* 썸네일 상자 */
+        #th_box{
+            margin-top: 50px;
+            width: 60%;
+            display: flex;
+        }
+
+        /* 썸네일 */
+        .production{
+            position: relative;
+            width: 125px;
+            height: 180px;
+            padding: 5px 10px;
+            margin:0 0 20px 0;
+
+        }
+
+        .production img:first-child{
+            position: absolute;
+            width: 100px;
+            height: 120px;
+            top: 15px;
+        }
+
+        .production img#heart1,
+        .production img#heart2,
+        .production img#heart3,
+        .production img#heart4,
+        .production img#heart5,
+        .production img#heart6,
+        .production img#heart7,
+        .production img#heart8,
+        .production img#heart9,
+        .production img#heart10,
+        .production img#heart11,
+        .production img#heart12{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+
+        .heart{
+            filter: invert(80%) sepia(34%) saturate(6289%) hue-rotate(315deg) brightness(102%) contrast(95%);
+        }
+
+        .production h3,
+        .production p{
+            position: absolute;
+            top: 135px;
+        }
+
+        .production p{
+            position: absolute;
+            top: 155px;
+            left: 25%;
+        }
+
+        #flexbox{
+            display: none;
+        }
+
+        @media only screen and (max-width:767px){
+            .sc3_tab{
+                height: 430px;
+            }
+
+            #th_box{
+                width: 60%;
+                height: 400px;
+                margin: 0 auto;
+                padding-top: 50px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+
+        @media only screen and (min-width:768px) and (max-width:1299px){
+            .sc3_tab{
+                height: 460px;
+            }
+            
+            #th_box{
+                width: 600px;
+                height: 500px;
+                margin: 0 auto;
+                padding-top: 50px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .production{
+                zoom: 1.03;
+            }
+        }
+
+        @media only screen and (min-width:1300px){
+            #section3{
+                height: 1600px;
+            }
+            
+            .sc3_tab{
+                height: 600px;
+                margin: 0 auto;
+                overflow: hidden;
+                justify-content: flex-start;
+            }
+
+            #th_box{
+                flex: 2;
+                height: 550px;
+                margin-right: 150px;
+                padding-left: 150px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                overflow: hidden;
+            }
+
+            .production{
+                margin: 15px;
+                zoom: 1.3;
+            }
+
+            /* 사이드 배너 */
+            #sideB{
+                display: block;
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.438);
+                margin: 80px 50px 0 0;
+                width: 386px;
+                height: 483px;
+                background-image: url(../IMG/Banner/banner8.png);
+            }   
+
+            #flexbox{
+                display: block;
+            }
+
+            .flexbox{
+                display: flex;
+                width: 80%;
+                height: 500px;
+                margin: 0 auto;
+            }
+
+            .flexbox div{
+                height: 500px;
+                background-position: center center;
+            }
+
+            #fb01{
+                background-image: url(../IMG/detailshot/furniture\ \(1\).jpg);
+                background-size: cover;
+                transition: .5s;
+                flex: 1;
+            }
+
+            #fb02{
+                background-image: url(../IMG/another/furniture_concept\ \(5\).jpg);
+                background-size: cover;
+                transition: .5s;
+                flex: 1;
+            }
+
+            #fb03{
+                background-image: url(../IMG/another/furniture_concept\ \(7\).jpg);
+                background-size: cover;
+                transition: .5s;
+                flex: 1;
+            }
+
+            #fb04{
+                background-image: url(../IMG/another/furniture_concept\ \(9\).jpg);
+                background-size: cover;
+                transition: .5s;
+                flex: 1;
+            }
+
+            #fb05{
+                background-image: url(../IMG/another/furniture_concept\ \(3\).jpg);
+                background-size: cover;
+                transition: .5s;
+                flex: 1;
+            }
+
+            #fb01:hover,
+            #fb02:hover,
+            #fb03:hover,
+            #fb04:hover,
+            #fb05:hover{
+                flex:2;
+            }
+        }

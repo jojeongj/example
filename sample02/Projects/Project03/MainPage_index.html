@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 완성</title>
+    <!-- 스타일시트 연결 -->
+    <link rel="stylesheet" href="css/style_main.css"></link>
+    
+    <!-- 제이쿼리 연결 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 메인 배너 캐러셀 연결 -->
+    <script src="js/jquery.bxslider.js"></script>
+    <!-- 캐러셀 스타일링 -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+
+
+ 
+    <!-- 스와이퍼 캐러샐 적용-->
+    <link rel="stylesheet" href="css/swiper.css"></link>
+    <!-- 폰트어썸 스크립트 -->
+    <script src="https://kit.fontawesome.com/b11e5da617.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.css"></link>
+    <script src="js/swiper-bundle.js"></script>
+
+
+</head>
+<body>
+    <header>
+        <!-- 모바일 타블렛 모드 헤더 -->
+        <div id="headerWrap">
+
+            <!-- 햄버거 메뉴버튼 -->
+            <div id="slideButton">
+                <a id="toggle" href="#">
+                    <span class="mid-line"></span>
+                    <span class="top-line"></span>
+                    <span class="bot-line"></span>                  
+                </a>    
+            </div>
+
+            <!-- 영진 로고 -->
+            <a href="index.html"><div id="mainLogo"></div></a>
+
+            <!-- 전화걸기 아이콘 -->
+            <div id="topCall">
+                <a href="#">
+                    <svg version="1.1" id="call_but" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="0 0 55.3 55.3" style="enable-background:new 0 0 55.3 55.3;" xml:space="preserve">
+                    <path class="st0" d="M12.1,11.7c-1.5,0.9-2.5,2.4-2.6,4.1c-0.2,2.4,0.3,4.9,1.3,7.1c0,0,5.2,13.9,22.5,22.3c0.8,0.4,1.7,0.7,2.6,0.8
+                        c2.3,0.4,6.4,0.7,7.8-2l2-3.2c0.3-0.6,0.2-1.3-0.4-1.7l-7.8-5.3c-0.6-0.4-1.5-0.3-1.9,0.3l-2.2,2.8c-0.5,0.7-1.5,0.9-2.3,0.5
+                        c-3-1.6-9.5-6.6-12.7-12.6c-0.3-0.7-0.2-1.6,0.5-2.1l2.8-2.1c0.7-0.6,0.9-1.7,0.3-2.5l-5.1-7.3c-0.5-0.7-1.5-1-2.3-0.5L12.1,11.7z"
+                        />
+                    <path class="st0" d="M30.1,22.5c0,0,3.7,0.1,3.8,3.9"/>
+                    <path class="st0" d="M30.1,18.8c0,0,7.2-0.2,7.7,7.6"/>
+                    <path class="st0" d="M30.1,14.8c0,0,11.1,0.4,11.3,11.6"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 헤더 실행문 -->
+            <script>
+                window.addEventListener("scroll", function(){
+                    var header = this.document.querySelector("#headerWrap");
+                    const change_Color = this.document.querySelector("#headerWrap")
+                    
+                    header.classList.toggle("sticky", window.scrollY > 0)
+                    change_Color.classList.toggle("changecolor", window.scrollY > 0);
+                });
+            </script>
+
+            <!-- 슬라이드 메뉴 -->
+            <nav>
+                <ul id="main_menu">
+                    <li id="blank"></li>
+                    <li><a href="#">모집과정</a>
+                        <ul class="snd_menu sub_menu">
+                            <li><a href="#">- 모집중인 과정</a></li>
+                            <li><a href="../subpage/SubPage_index.html">- 진행중인 과정</a>
+                            <li><a href="#">- 연간모집 과정</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">과정소개</a>
+                        <ul class="snd_menu sub_menu">
+                            <div>
+                                <li><a href="#">- IT · SW</a></li>
+                                <li><a href="#">- 디자인</a></li>
+                                <li><a href="#">- 경영회계</a></li>
+                                <li><a href="#">- 조경 · 중장비</a></li>
+                                <li><a href="#">- 전기공사</a></li>
+                            </div>
+                            <div>
+                                <li><a href="#">- 기계설계</a></li>
+                                <li><a href="#">- 공조냉동</a></li>
+                                <li><a href="#">- 가구 · 공예</a></li>
+                                <li><a href="#">- 패션봉제</a></li>
+                                <li><a href="#">- 용접</a></li> 
+                            </div>    
+                        </ul>
+                    </li>
+                    <li><a href="#">입학신청</a>
+                        <ul class="snd_menu sub_menu">
+                            <li><a href="#">- 온라인 접수</a></li>
+                            <li><a href="#">- 입학상담</a></li>
+                            <li><a href="#">- 자주하는 질문</a></li>
+                            <li><a href="#">- 접수상태 확인</a></li>
+                            <li><a href="#">- 일반고 입학상담</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">국비지원안내</a>
+                        <ul class="snd_menu sub_menu">
+                            <li><a href="#">- 국민내일배움카드</a></li>
+                            <li><a href="#">- 국민취업지원제도</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">취업지원</a>
+                        <ul class="snd_menu sub_menu">
+                            <li><a href="#">- 채용소식</a></li>
+                            <li><a href="#">- 업무협력소식</a></li>
+                            <li><a href="#">- 취업센터소식</a></li>
+                            <li><a href="#">- 취업성공후기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">커뮤니티</a>
+                        <ul class="snd_menu sub_menu">
+                            <li><a href="#">- 포트폴리오</a></li>
+                            <li><a href="#">- 교내송암공모전</a></li>
+                            <li><a href="#">- 영진소식</a></li>
+                            <li><a href="#">- YJ재능 봉사단</a></li>
+                            <li><a href="#">- 학교에 바란다</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">학교소개</a>
+                        <ul class="snd_menu sub_menu">
+                            <li><a href="#">- 인사말</a></li>
+                            <li><a href="#">- 조직도 및 연혁</a></li>
+                            <li><a href="#">- 교육시스템</a></li>
+                            <li><a href="#">- 교직원소개</a></li>
+                            <li><a href="#">- 시설안내</a></li>
+                            <li><a href="#">- 오시는 길</a></li>
+                            <li><a href="#">- 교수 채용</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">회원메뉴</a>
+                        <ul class="snd_menu sub_menu">
+                            <li><a href="#">- 로그인</a></li>
+                            <li><a href="#">- NCS평가</a></li>
+                            <li><a href="#">- 설문조사</a></li>
+                            <li><a href="#">- 시험응시</a></li>
+                            <li><a href="#">- 경북산업직업전문학교 (자매학교)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 슬라이드 메뉴 실행문 -->
+            <script>
+                $(document).ready(function(){
+      
+                // $('button').click(function(){
+                //   $(this).next($('#main_menu')).slideToggle('slow');
+                // })
+                
+                $('#main_menu>li:nth-child(3)>ul').slideUp('fast');
+
+                $('#toggle').on('click' , function(e){
+                    e.preventDefault();
+                    const nav = $("nav").toggleClass("on");
+                $(this).toggleClass('on')
+                $("#main_menu").toggleClass('on');
+    
+                }) // button 클릭시  button 과 ul#maun_menu 에 toggle 형식으로  class 'on' 이 붙는다.
+    
+                // $('#main_menu > li > a').click(function(){
+                // $(this).next($('.snd_menu')).slideToggle('fast');
+                // })
+                // $('.snd_menu > li > a').click(function(e){
+                // e.stopPropagation();
+                // $(this).next($('.trd_menu')).slideToggle('fast');
+                // })
+    
+                // 버튼 클릭 시 색 변경
+                $('#main_menu > li > a').click(function(){
+
+                    if($(this).hasClass('selec')) {
+                        $(this).removeClass('selec');
+                        $(this).next($('.snd_menu')).slideUp('fast')
+
+                    } else {
+                        $(this).addClass('selec');
+                        $(this).next($('.snd_menu')).slideDown('fast')
+                    }
+                });
+
+                $("#main_menu > li > a").blur(function() {
+                    $(this).removeClass('selec');
+                    // $(this).next($('.snd_menu')).slideUp('fast');
+                })
+                });
+
+                //메뉴 클릭시 다른 메뉴 닫히게 
+                $('#main_menu > li > a').click(function(){
+                $('.snd_menu').not(this).slideUp('fast');
+                })
+
+            </script>
+        </div>
+
+
+        <!-- 웹모드 헤더 -->
+        <div id="webHeader">
+            <a href="index.html"><div id="webLogo"></div></a>  
+            <div id="webLogin">  
+                <ul>
+                    <li id="greeting" class="hidden"></li>&nbsp;&nbsp;
+                    <li><a class="btn-open-popup">로그인&nbsp; | &nbsp;</a></li>
+                    <li><a href="">NCS평가&nbsp; | &nbsp;</a></li>
+                    <li><a href="">설문조사&nbsp; | &nbsp;</a></li>
+                    <li><a href="">시험응시&nbsp; | &nbsp;</a></li>
+                    <li><a href="http://www.kb.or.kr/"><div class="kbschool"></div></a></li>
+                </ul>
+            </div>    
+            <div id="webGnb">
+                <ul>
+                    <li>
+                        <a href="#">모집과정</a>
+                        <ul class="lnb">
+                            <li><a href="#">모집중인 과정</a></li>
+                            <li><a href="../subpage/login2.html">진행중인 과정</a></li>
+                            <li><a href="#">연간모집 과정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">과정소개</a>
+                        <ul class="lnb">
+                            <li><a href="#">IT·SW</a></li>
+                            <li><a href="#">디자인</a></li>
+                            <li><a href="#">경영회계</a></li>
+                            <li><a href="#">조경·중장비</a></li>
+                            <li><a href="#">전기공사</a></li>
+                            <li><a href="#">용접</a></li>
+                            <li><a href="#">기계설계</a></li>
+                            <li><a href="#">공조냉동</a></li>
+                            <li><a href="#">가구·공예</a></li>
+                            <li><a href="#">패션봉제</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">입학신청</a>
+                        <ul class="lnb">
+                            <li><a href="#">온라인 접수</a></li>
+                            <li><a href="#">입학상담</a></li>
+                            <li><a href="#">자주하는 질문</a></li>
+                            <li><a href="#">접수상태 확인</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">국비지원</a>
+                        <ul class="lnb">
+                            <li><a href="#">국민내일배움카드</a></li>
+                            <li><a href="#">국민취업지원제도</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">취업지원</a>
+                        <ul class="lnb">
+                            <li><a href="#">채용소식</a></li>
+                            <li><a href="#">업무협력소식</a></li>
+                            <li><a href="#">취업센터소식</a></li>
+                            <li><a href="#">취업성공후기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="lnb">
+                            <li><a href="#">포트폴리오</a></li>
+                            <li><a href="#">교내송암공모전</a></li>
+                            <li><a href="#">영진소식</a></li>
+                            <li><a href="#">YJ재능 봉사단</a></li>
+                            <li><a href="#">학교에 바란다</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">학교소개</a>
+                        <ul class="lnb" id="lastlnb">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">조직도 및 연혁</a></li>
+                            <li><a href="#">교육시스템</a></li>
+                            <li><a href="#">교직원 소개</a></li>
+                            <li><a href="#">시설안내</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                            <li><a href="#">교수 채용</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </header>
+    <!-- 헤더 자바스크립트-->
+    <script>
+        // 헤더 실행문
+        window.addEventListener("scroll", function(){
+            const header = this.document.querySelector("#webHeader");
+            const change_Color = this.document.querySelector("#webHeader");
+            
+            header.classList.toggle("change", window.scrollY > 0);
+            change_Color.classList.toggle("changecolor", window.scrollY > 0);
+        });
+
+        
+
+
+
+
+        // 드롭다운 실행문
+        $(function() {
+            const $firstMenu = $('#webGnb > ul'),
+                        $header = $('#webHeader');
+
+            $firstMenu.mouseenter(function() {
+                $header.animate({height: '470px'}, 100);
+            })
+            .mouseleave(function() {
+                $header.animate({height: '125px'}, 100);
+            });
+        });
+    </script>
+
+
+<!-- 로그인 모달 -->
+<div class="modal hidden">
+    <div class="modal_body">
+        <img src="img/single_logo.png" alt="영진로고">
+        <div>
+            <fieldset>
+                <legend>로그인</legend>
+                <form class="login_box">
+                    <div>
+                        <input required maxlength="20"type="text" placeholder="아이디" value="" />
+                        <input required maxlength="20" type="password" placeholder="비밀번호" value="" />
+                    </div>
+                    <div>
+                        <input type="checkbox"> 로그인 유지                                
+                        <button id="loginBut">Login</button>
+                    </div>
+                    
+                </form>
+
+                
+                <div class="login_textbox">                
+                    <p><a href="#">회원가입</a> | <a href="#">아이디/비밀번호 찾기</a></p>
+    
+                    <a href="#"><img class="sns_login" src="img/google.png" alt="구글연결"></a>
+                    <a href="#"><img class="sns_login" src="img/kkot.png" alt="카카오톡연결"></a>
+                    <a href="#"><img class="sns_login" src="img/naver.png" alt="네이버연결"></a>
+                    <a href="#"><img class="sns_login" src="img/fb.png" alt="페이스북연결"></a>
+                </div>     
+            </fieldset>        
+        </div>
+    </div>
+</div>
+
+
+<!-- 모달 실행문 -->
+<script>
+    const body = document.querySelector('body');
+    const modal = document.querySelector('.modal');
+    const btnOpenPopup = document.querySelector('.btn-open-popup');
+
+    btnOpenPopup.addEventListener('click', (e) => {
+        modal.classList.toggle('show');
+
+        if (modal.classList.contains('show')) {
+            body.style.overflow = 'hidden';
+        }
+    });
+
+    modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.classList.toggle('show');
+
+    if (!modal.classList.contains('show')) {
+        body.style.overflow = 'auto';
+    }
+    }
+});
+
+const loginLi = document.querySelector(".btn-open-popup");
+const loginForm = document.querySelector(".login_box");
+const loginInput = document.querySelector(".login_box input"); // id = login_form 자식에 input
+const greeting = document.querySelector("#greeting");// id = greeting
+
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+function onLoginSubmit(event) { 
+    // event.preventDefault(); //기본동작을 막는다.
+    loginForm.classList.add(HIDDEN_CLASSNAME); //loginForm변수  (form을 숨김)
+    loginLi.classList.add(HIDDEN_CLASSNAME); //loginForm변수  (form을 숨김)
+    const username = loginInput.value;  // loginInput.value를 username 이라는 변수에 저장
+    localStorage.setItem(USERNAME_KEY, username);  // username 값을 username이라는 key 와 함께 local storage에 저장
+    paintGreetings(username); // paintGreetings 함수 호출
+}
+// 
+function paintGreetings(username) { // 이함수는 username 이라는 인자를 하나 받고 있다.
+    greeting.innerText = `${username} 님 환영합니다 |`;  // h1 요소 안에  `Hello ${saveUsername}` 추가
+    greeting.classList.remove(HIDDEN_CLASSNAME);  //id greeting인 곳에 class=hidden 이라는 클래스명 제거
+    loginLi.classList.add("hidden");
+}
+
+const saveUsername = localStorage.getItem(USERNAME_KEY);
+
+if(saveUsername === null ) {
+    loginLi.classList.remove(HIDDEN_CLASSNAME); //class에  hidden 제거
+    loginForm.classList.remove(HIDDEN_CLASSNAME); //class에  hidden 제거
+    loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+    paintGreetings(saveUsername);
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 헤더 끝~~~~ -->
+
+
+
+
+
+
+    <!-- 메인 배너 캐러셀 -->
+    <div class="carousel">
+        <div class="bxslider">
+            <div>
+                <picture>
+                    <source srcset="img/banner/web_1.jpg" media="(min-width:1200px) and (max-width:1920px)">
+                    <source srcset="img/banner/ta_1.jpg" media="(min-width:768px) and (max-width:1199px)">
+                    <source srcset="img/banner/mo_1.jpg" media="(min-width:320px) and (max-width:767px)">
+                    <img src="img/banner/mo_1.jpg" alt="국민취업제도" style="width: 100%;">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="img/banner/web_2.jpg" media="(min-width:1200px) and (max-width:1920px)">
+                    <source srcset="img/banner/ta_2.jpg" media="(min-width:768px) and (max-width:1199px)">
+                    <source srcset="img/banner/mo_2.jpg" media="(min-width:320px) and (max-width:767px)">
+                    <img src="img/banner/mo_2.jpg" alt="최우수훈련기관" style="width: 100%;">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="img/banner/web_3.jpg" media="(min-width:1200px) and (max-width:1920px)">
+                    <source srcset="img/banner/ta_3.jpg" media="(min-width:768px) and (max-width:1199px)">
+                    <source srcset="img/banner/mo_3.jpg" media="(min-width:320px) and (max-width:767px)">
+                    <img src="img/banner/mo_3.jpg" alt="케이트레이닝" style="width: 100%;">
+                </picture>
+            </div>
+        </div>   
+    </div>
+    <!-- 캐러셀 실행문 -->
+    <script>
+        $('.bxslider').bxSlider({
+            auto: true,
+            autoHover: true,
+        })
+    </script>
+
+
+
+
+
+
+    <!-- 본문 -->
+    <section>
+
+
+        <!-- 온라인접수 -->
+        <div id="wrapBox">
+            <div>
+                <a href="#">
+                    <div><img class="icon1" src="img/contents/receipt.svg" alt="온라인접수"></div>
+                    <div>
+                        <h3>온라인접수</h3>
+                        <p>접수하기<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <div><img class="icon1" src="img/contents/check.svg" alt="접수상태확인"></div>
+                    <div>
+                        <h3>접수상태확인</h3>
+                        <p>확인하기<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <div><img class="icon1" src="img/contents/call.svg" alt="전화하기"></div>
+                    <div>
+                        <h3>053-983-8877</h3>
+                        <p>전화하기<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- 현재모집과정 -->
+
+        <article class="container" id="present">
+            <div class="title">
+                <h2>현재모집과정</h2>
+                <p>현재 영진직업전문학교의 모집과정을 확인해보세요</p>
+            </div>
+            <div class="contents">
+
+                <div class="tab_content">
+                    <input type="radio" name="tabmenu" id="tab01" checked>
+                    <label for="tab01">IT·SW</label>
+                    <input type="radio" name="tabmenu" id="tab02">
+                    <label for="tab02">전기공사</label>
+                    <input type="radio" name="tabmenu" id="tab03">
+                    <label for="tab03">기계설계</label>
+                    <input type="radio" name="tabmenu" id="tab04">
+                    <label for="tab04">디자인</label>
+                    <input type="radio" name="tabmenu" id="tab05">
+                    <label for="tab05">용접</label>
+
+                    <input type="radio" name="tabmenu" id="tab06">
+                    <label for="tab06">공조냉동</label>
+                    <input type="radio" name="tabmenu" id="tab07">
+                    <label for="tab07">조경·중장비</label>
+                    <input type="radio" name="tabmenu" id="tab08">
+                    <label for="tab08">가구·공예</label>
+                    <input type="radio" name="tabmenu" id="tab09">
+                    <label for="tab09">경영회계</label>
+                    <input type="radio" name="tabmenu" id="tab10">
+                    <label for="tab10">패션봉제</label>
+                </div>
+            
+            <!-- Swiper -->
+            <div class="swiper present_cs">
+                <div class="swiper-wrapper" >
+                    <div class="swiper-slide" >
+                        
+                        <div class="card"  >
+                            <img src="img/present/iot.svg" alt="itsw" />
+                            <div class="intro">
+                                <p>K-Digital Training</p>
+                                <h1>지능형 IoT 양성과정</h1>
+                                <p>2022.06.01 ~ 2022.12.07	</p>
+                                <div class="moreBox">
+                                    <p>
+                                        오픈플랫폼 활용 지능형 IoT Device 펌웨어 및 융합SW 개발자양성 (7개월)
+                                    </p>
+                                    <p>모집인원 24명</p>
+                                    <p>수강료 전액무료</p>
+                                    <p>훈련수당 316,000원 (매달지급)</p>
+                                    <p><a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide">
+                        
+                        <div class="card">
+                            <img src="img/present/elec.svg" alt="전기공사" />
+                            <div class="intro">
+                                <p>스마트혼합훈련</p>
+                                <h1>전기공사 및 관리자</h1>
+                                <p>2022.04.12 ~ 2022.10.20	</p>
+                                <div class="moreBox">
+                                    <p>(내선공사) 전기공사 및 전기관리자 양성 (7개월)</p>
+                                    <p>모집인원 30명</p>
+                                    <p>수강료 전액무료</p>
+                                    <p>훈련수당 116,000원 (매달지급)</p>
+                                    <p><a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide">
+                        
+                        <div class="card">
+                            <img src="img/present/machine.svg" alt="기계설계" />
+                            <div class="intro">
+                                <p>스마트혼합훈련</p>
+                                <h1>CAD/CAM 3D기계설계</h1>
+                                <p>2022.04.28 ~ 2022.11.17</p>
+                                <div class="moreBox">
+                                    <p>(BIM) 건축설계(캐드, 레빗, 스케치업, 맥스) 디지털 설계 실무자 양성과정 (6개월)</p>
+                                    <p>모집인원 25명</p>
+                                    <p>수강료 전액무료</p>
+                                    <p>훈련수당 116,000원 (매달지급)</p>
+                                    <p><a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide">
+                        
+                        <div class="card">
+                            <img src="img/present/design.svg"  alt="디자인" />
+                            <div class="intro">
+                                <p>과정평가형자격</p>
+                                <h1>시각디자인산업기사</h1>
+                                <p>2022.04.22 ~ 2022.10.31</p>
+                                <div class="moreBox">
+                                    <p>시각디자인산업기사취득과 디자인실무 (6개월)</p>
+                                    <p>모집인원 20명</p>
+                                    <p>수강료 전액무료</p>
+                                    <p>훈련수당 116,000원 (매달지급)</p>
+                                    <p><a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide">
+                        
+                        <div class="card">
+                            <img src="img/present/meld.svg"  alt="용접" />
+                            <div class="intro">
+                                <p>과정평가형자격</p>
+                                <h1>용접산업기사 취득과정</h1>
+                                <p>2022.06.21 ~ 2022.12.22</p>
+                                <div class="moreBox">
+                                    <p>용접산업기사(CO2,TIG,피복아크) 취득과정 (6개월)</p>
+                                    <p>모집인원 20명</p>
+                                    <p>수강료 전액무료</p>
+                                    <p>훈련수당 116,000원 (매달지급)</p>
+                                    <p><a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide">
+                        
+                        <div class="card">
+                            <img src="img/present/ref.svg" alt="공조냉동" />
+                            <div class="intro">
+                                <p>공조냉동기계</p>
+                                <h1>공조냉동 설치정비</h1>
+                                <p>2022.04.27 ~ 2022.10.25</p>
+                                <div class="moreBox">
+                                    <p>공조냉동 기계 설치정비 기술자 (6개월) 스마트혼합훈련</p>
+                                    <p>모집인원 25명</p>
+                                    <p>수강료 전액무료</p>
+                                    <p>훈련수당 116,000원 (매달지급)</p>
+                                    <p><a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide">
+                        
+                        <div class="card">
+                            <img src="img/present/garden.svg" alt="조경중장비" />
+                            <div class="intro">
+                                <p>스마트혼합훈련</p>
+                                <h1>조경시공 및 관리자</h1>
+                                <p>2022.05.09 ~ 2022.11.14</p>
+                                <div class="moreBox">
+                                    <p>조경시공 및 관리자 양성과정 A (6개월)</p>
+                                    <p>모집인원 30명</p>
+                                    <p>수강료 전액무료</p>
+                                    <p>훈련수당 116,000원 (매달지급)</p>
+                                    <p><a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide">
+                        
+                        <div class="card">
+                            <img src="img/present/fur.svg" alt="가구공예" />
+                            <div class="intro">
+                                <p>스마트혼합훈련</p>
+                                <h1>가구설계제작</h1>
+                                <p>2022.04.04 ~ 2022.11.03</p>
+                                <div class="moreBox">
+                                    <p>가구설계제작 양성과정 (7개월)</p>
+                                    <p>모집인원 22명</p>
+                                    <p>수강료 전액무료</p>
+                                    <p>훈련수당 116,000원 (매달지급</p>
+                                    <p><a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide">
+                        
+                        <div class="card">
+                            <img src="img/present/count.svg" alt="경영회계" />
+                            <div class="intro">
+                                <p>생산정보시스템</p>
+                                <h1>ERP회계사무원양성</h1>
+                                <p>2022.06.21 ~ 2022.11.22	</p>
+                                <div class="moreBox">
+                                    <p>ERP 운용실무 및 회계사무원 양성 (5개월)</p>
+                                    <p>모집인원 25명</p>
+                                    <p>수강료 전액무료</p>
+                                    <p>훈련수당 116,000원 (매달지급)</p>
+                                    <p><a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide">
+                        
+                        <div class="card">
+                            <img src="img/present/fash.svg" alt="패션봉제" />
+                            <div class="intro">
+                                <p>과정평가형자격</p>
+                                <h1>양장기능사 취득과정</h1>
+                                <p>2022.06.28 ~ 2022.12.09</p>
+                                <div class="moreBox">
+                                    <p>양장기능사 취득과정 - 패턴제작, 제직의류 재단, 봉제 (6개월)</p>
+                                    <p>모집인원 20명</p>
+                                    <p>수강료 전액무료</p>
+                                    <p>훈련수당 116,000원 (매달지급)</p>
+                                    <p><a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>       
+            
+                    
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            </section>
+            
+            
+            
+            
+            
+            <script src="./js/script.js"></script>
+
+
+
+
+
+
+
+
+            </div>
+
+        </article>
+
+
+
+
+
+        <!-- 홍보영상 -->
+
+        <article class="container" id="promotion">
+            <div class="title">
+                <h2>홍보영상</h2>
+                <p>영진직업전문학교의 모든 이야기를 <br class=proBr />영상으로 만나보세요</p>
+                <a href="#">
+                    <p>more<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -2 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                    </p>
+                </a>
+
+                <div id="addVideo">
+                    <p>
+                        <a href="">
+                            채널 바로가기 
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                        </a>                    
+                    </p>
+                    <button class="vid-link picked" vid-tab="tab-01">
+                        <img src="img/video/v_03.jpg" alt="K디지털트레이닝">
+                    </button>
+                    <button class="vid-link" vid-tab="tab-02">
+                        <img src="img/video/v_02.jpg" alt="경력단절재취업">
+                    </button>
+                    <button class="vid-link" vid-tab="tab-03">
+                        <img src="img/video/v_01.jpg" alt="K디지털학과">
+                    </button>            
+                </div>
+                
+            </div>
+            <div class="contents">
+                <div class="video">
+                    <div id="tab-01" class="vid-content picked">
+                        <iframe src="https://www.youtube.com/embed/SklOfbDKQOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div id="tab-02" class="vid-content">
+                        <iframe src="https://www.youtube.com/embed/ebs3CFA8LTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div id="tab-03" class="vid-content">
+                        <iframe src="https://www.youtube.com/embed/b0nmNKiQa1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- 홍보영상 실행문 -->
+        <script>
+            $(document).ready(function(){
+                $('button.vid-link').click(function(){
+                    // .attr('vid-tab') : vid-tab에 지정된 값을 불러옴
+                    var vid_id = $(this).attr('vid-tab');
+
+                    // $('ul.tabs li').removeClass('picked');
+                    $('.vid-content').removeClass('picked');
+
+                    $(this).addClass('picked');
+                    $("#"+vid_id).addClass('picked');
+                })
+
+            })
+        </script>
+
+
+
+
+
+
+        <!-- 포트폴리오 -->
+
+        <article class="container" id="portfolio">
+            <div class="title">
+                <h2>포트폴리오</h2>
+                <p>수료생들의 작품을 감상해보세요</p>
+                <a href="#">
+                    <p>more<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -2 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                    </p>
+                </a>
+            </div>
+            <div class="contents">
+
+                <div id="butBox">
+                    <button class="tab-link current" data-tab="tab-1">IT·SW</button>
+                    <button class="tab-link" data-tab="tab-2">디자인</button>
+                    <button class="tab-link" data-tab="tab-3">가구·공예</button> <br />
+                    <button class="tab-link" data-tab="tab-4">용접·공조</button>
+                    <button class="tab-link" data-tab="tab-5">기계설계</button>
+                    <button class="tab-link" data-tab="tab-6">패션봉제</button>
+                </div>
+
+                <div id="protBox">
+                    <div id="tab-1" class="tab-content current">
+                        <a href="#"><div class="port_first"></div></a>
+                        <a href="#"><div class="port_second"></div></a>
+                    </div>
+                    <div id="tab-2" class="tab-content">
+                        <a href="#"><div class="port_first"></div></a>
+                        <a href="#"><div class="port_second"></div></a>
+                    </div>
+                    <div id="tab-3" class="tab-content">
+                        <a href="#"><div class="port_first"></div></a>
+                        <a href="#"><div class="port_second"></div></a>
+                    </div>
+                    <div id="tab-4" class="tab-content">
+                        <a href="#"><div class="port_first"></div></a>
+                        <a href="#"><div class="port_second"></div></a>
+                    </div>
+                    <div id="tab-5" class="tab-content">
+                        <a href="#"><div class="port_first"></div></a>
+                        <a href="#"><div class="port_second"></div></a>
+                    </div>
+                    <div id="tab-6" class="tab-content">
+                        <a href="#"><div class="port_first"></div></a>
+                        <a href="#"><div class="port_second"></div></a>
+                    </div>
+                </div>
+
+                <!-- 탭버튼 실행문 -->
+                <script>                
+                $(document).ready(function(){
+                    $('button.tab-link').click(function(){
+                        // .attr('data-tab') : data-tab에 지정된 값을 불러옴
+                        var tab_id = $(this).attr('data-tab');
+                
+                        // $('ul.tabs li').removeClass('current');
+                        $('.tab-content').removeClass('current');
+                        $('button').not(this).removeClass('current');
+                        $(this).addClass('current');
+                        $("#"+tab_id).addClass('current');
+
+                    })                
+                })
+
+                //버튼을 눌렀을 때 다른 버튼의 색상을 변경하는 코드
+                // $('button').click(function(){
+                //     $('button').not(this).removeClass('current');
+                // });
+
+                </script>
+
+
+            </div>
+
+
+
+
+
+        </article>
+
+
+
+
+        <!-- 채용소식 취업후기 -->
+
+        <article class="container" id="job">
+            <div id="recruit">
+                <div class="title">
+                    <h2>채용소식</h2>
+                    <p>실시간 채용정보를 업데이트 합니다</p>
+                    <a href="#">
+                        <p>more<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -2 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                        </p>
+                    </a>
+                </div>
+                <div class="contents">
+                    <div class="memo">
+                        <div class="re_memo"></div>
+                        <div class="re_memo">[경북 문경] (주)애O룩스 - 편집디자인</div>
+                        <div class="re_memo">[대구 서구] 사)한지O라공예문화협회 - 디자인</div>
+                        <div class="re_memo">[대구 동구] (주)씨엠O이글로벌 - 디자인출력</div>
+                        <div class="re_memo">[대구 북구] 주식회사 라O애드원 - 디자인</div>
+                        <div class="re_memo">[경북 칠곡] 대O공업사 - 용접</div>
+                    </div>
+                </div>  
+                </div>
+            </div>
+
+            <div id="interview">
+                <div class="title">
+                    <h2>취업후기</h2>
+                    <p>수료생들의 생생한 취업 후기를 들어보세요</p>
+                    <a href="#">
+                        <p>more<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -2 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                        </p>
+                    </a>
+                </div>
+                <div class="contents">
+                    <div class="inter_box">
+                        <div class="person"><img src="img/contents/per_1.svg" alt="사람아이콘"></div>
+                        <div>
+                            <b>배현민</b> <mark>조경산업기사</mark>
+                            <p>6개월간 기초부터 심화까지 교육받고 현직에서 유용한 기술과 여러 내용을 익힐 수 있어서 매우 좋았습니다.</p>
+                        </div>
+                    </div>
+                    <div class="inter_box">
+                        <div class="person"><img src="img/contents/per_2.svg" alt="사람아이콘"></div>
+                        <div>
+                            <b>장지수</b> <mark>ERP,회계사무</mark>
+                            <p>교육을 받으며 다른 학우들과 서로 물어보고 가르쳐주며 공부를 할 수 있어서 효과적으로 공부를 할 수 있었습니다.</p>
+                        </div>
+                    </div>
+                    <div class="inter_box">
+                        <div class="person"><img src="img/contents/per_3.svg" alt="사람아이콘"></div>
+                        <div>
+                            <b>박세언</b> <mark>용접산업기사</mark>
+                            <p>다양한 용접을 배울 수 있었고 익숙해질 수 있도록 훈련이 체계적으로 진행된 점이 도움이 되었습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </article>
+
+
+
+
+        <!-- 끝~ -->
+    </section>
+
+
+
+
+
+
+    <!-- 푸~터~ -->
+    <footer>
+        <div class="logo_footer"><img src="img/logo_w.png" alt="푸터영진로고"></div>
+        <div class="adress_footer">
+            <p>회사명 : 영진직업전문학교 &nbsp;&nbsp; 대표자 : 곽승호, 차영숙</p>
+            <p>Tel : 053-983-8877 &nbsp;&nbsp;Fax : 053-722-2423 </p>
+            <p>개인정보보호책임자 : 곽창운 &nbsp;&nbsp; Tel : 053-983-8877 </p>
+            <p>사업자번호 : 502-95-07029</p>
+            <p>701-835 대구광역시 동구 화랑로 525(용계동), 조경실습장 : 대구 동구 도동 806-21</p>
+            <p>copyright © 대구 국비지원 무료교육 영진직업전문학교. All Rights Reserved.</p>
+        </div>
+        <div class="sns_footer">
+            <a href="#"><img src="img/fb.png" alt="페이스북"></a>
+            <a href="#"><img src="img/kkot.png" alt="카카오톡"></a>
+            <a href="#"><img src="img/insta.png" alt="인스타그램"></a>
+            <a href="#"><img src="img/naver.png" alt="네이버"></a>
+        </div>
+    </footer>
+
+
+    <div id="top">
+        <a href="#"><img id="chat_bot" src="img/kkot.png" alt="챗봇"></a><br />
+        <a href="#"><svg id="top_but" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="#000000"><path d="M24 0v24H0V0h24z" fill="none" opacity=".87"/><path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6 1.41-1.41zM6 6h2v12H6V6z"/>
+        </svg></a>
+    </div>
+
+
+    <!-- 스크롤 300 이상에서 탑버튼 나타내기
+    <script>
+        $(window).scroll(function() {
+            if($(window).scrollTop()>300){
+                $("#top").show();
+            } else {
+                $("#top").hide();
+            }
+        })
+    </script> -->
+
+
+
+</body>
+</html>

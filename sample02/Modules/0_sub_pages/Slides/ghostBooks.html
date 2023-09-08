@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고스트북스 기획서</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'OTWelcomeBA';
+            src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeBA.woff2") format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-family: 'OTWelcomeBA';
+            font-size: 2em;
+        }
+
+        body {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section {
+            width: 70%;
+            height: 70%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn-3 {
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 25px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+            outline: none;
+            background: rgb(37, 37, 37);
+            background: linear-gradient(0deg, rgb(56, 56, 56) 0%, rgb(65, 65, 65)00%);
+            width: 130px;
+            height: 40px;
+            line-height: 42px;
+            padding: 0;
+            border: none;
+        }
+
+        .btn-3 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn-3:before,
+        .btn-3:after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 0;
+            background: rgb(0, 0, 0);
+            transition: all 0.3s ease;
+        }
+
+        .btn-3:before {
+            height: 0%;
+            width: 2px;
+        }
+
+        .btn-3:after {
+            width: 0%;
+            height: 2px;
+        }
+
+        .btn-3:hover {
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .btn-3:hover:before {
+            height: 100%;
+        }
+
+        .btn-3:hover:after {
+            width: 100%;
+        }
+
+        .btn-3 span:hover a {
+            color: rgb(0, 0, 0);
+        }
+
+        .btn-3 span:before,
+        .btn-3 span:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            transition: all 0.3s ease;
+        }
+
+        .btn-3 span:before {
+            width: 2px;
+            height: 0%;
+        }
+
+        .btn-3 span:after {
+            width: 0%;
+            height: 2px;
+        }
+
+        .btn-3 span:hover:before {
+            height: 100%;
+        }
+
+        .btn-3 span:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="swiper-container swiper1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드1.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드2.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드3.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드4.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드5.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드6.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드7.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드8.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드9.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드10.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드11.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드12.PNG" alt="slide"> </div>
+
+            </div>
+            <!-- 네비게이션 버튼 -->
+            <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+            <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+        </div>
+        <br>
+        <div class="swiper-container swiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드13.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드14.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드15.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드16.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드17.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드18.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드19.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드20.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드21.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드22.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드23.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드24.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드25.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드26.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드27.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드28.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드29.PNG" alt="slide"> </div>
+            </div>
+            <!-- 네비게이션 버튼 -->
+            <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+            <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+        </div>
+        <br>
+        <div class="swiper-container swiper3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드30.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드31.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드32.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드33.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드34.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드35.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드36.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드37.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드38.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드39.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드40.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드41.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드42.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드43.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드44.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드45.PNG" alt="slide"> </div>
+
+            </div>
+            <!-- 네비게이션 버튼 -->
+            <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+            <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+        </div>
+
+        <br>
+
+        <div class="swiper-container swiper4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드46.PNG" alt="slide"> </div>
+                <div class="swiper-slide Videos"><iframe width="600" height="400" src="https://www.youtube.com/embed/ZslJSFXLU7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+                <div class="swiper-slide Videos"><iframe width="600" height="400" src="https://www.youtube.com/embed/XN4DOD1-y2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드48.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드49.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드50.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드51.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드52.PNG" alt="slide"> </div>
+                <div class="swiper-slide"><img src="../../5_maniging/ghostBooks/슬라이드53.PNG" alt="slide"> </div>
+            </div>
+            <!-- 네비게이션 버튼 -->
+            <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+            <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+        </div>
+        <br>
+
+
+        <button class="custom-btn btn-3"><span><a href="../../../index.html">돌아가기</a></span></button>
+    </div>
+</body>
+
+</html>
+<script>
+
+    // swiper1
+    new Swiper('.swiper1', {
+
+        navigation: { // 네비게이션 설정
+            nextEl: '.swiper-button-next', // 다음 버튼 클래스명
+            prevEl: '.swiper-button-prev', // 이번 버튼 클래스명
+        },
+    });
+
+    // swiper2
+    new Swiper('.swiper2', {
+
+        navigation: { // 네비게이션 설정
+            nextEl: '.swiper-button-next', // 다음 버튼 클래스명
+            prevEl: '.swiper-button-prev', // 이번 버튼 클래스명
+        },
+    })
+    // swiper3
+    new Swiper('.swiper3', {
+
+        navigation: { // 네비게이션 설정
+            nextEl: '.swiper-button-next', // 다음 버튼 클래스명
+            prevEl: '.swiper-button-prev', // 이번 버튼 클래스명
+        },
+    })
+    // swiper4
+    new Swiper('.swiper4', {
+
+        navigation: { // 네비게이션 설정
+            nextEl: '.swiper-button-next', // 다음 버튼 클래스명
+            prevEl: '.swiper-button-prev', // 이번 버튼 클래스명
+        },
+    })
+
+
+</script>
+
+<!-- <kimja>언니바보</kimja> -->

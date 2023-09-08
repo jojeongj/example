@@ -1,0 +1,27 @@
+
+/* ////////////////////////슬라이드 로직////////////////////////// */
+
+
+.Slide_container{
+    display: flex;
+    justify-content: center;
+}
+
+.bnt{
+    width: 100px;
+    height: 80px;
+    background: gray;   
+    border-radius: 20px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.SlideWrap{
+    display: flex;
+    overflow: hidden;
+}
+
+.Slide{
+    height: 100px;
+    width: 50px;
+}

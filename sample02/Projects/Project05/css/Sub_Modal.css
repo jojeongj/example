@@ -1,0 +1,9 @@
+.Md_close {
+  filter: invert(44%) sepia(50%) saturate(7496%) hue-rotate(197deg)
+    brightness(103%) contrast(104%) !important;
+}
+
+.MD_ok {
+  color: #fff;
+  background: #0080ff !important;
+}

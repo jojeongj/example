@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anlak for you</title>
+
+  <!-- Links -->
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/style_footer.css">
+  <link rel="stylesheet" href="./CSS/style_header.css">
+  <link rel="stylesheet" href="./CSS/style_section01.css">
+  <link rel="stylesheet" href="./CSS/style_section02.css">
+  <link rel="stylesheet" href="./CSS/style_section03.css">
+  <link rel="stylesheet" href="./CSS/style_section04.css">
+  <link rel="stylesheet" href="./CSS/style_slider.css">
+  <link rel="stylesheet" href="./CSS/jquery.bxslider.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="./JS/jquery-3.6.0.min.js"></script>
+  <script src="./JS/jquery.bxslider.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+  <!-- 슬라이드 -->
+  <div id="slide_bg"></div>
+  <div id="slide">
+    <a id="close_btn"><img id="close" src="./Icon/close_black_48dp.svg"></a>
+    <div id="profile">
+      <img id="pro_img" src="./Icon/Avartar.png" alt="아바타">
+      <h3>My Menu</h3>
+      <h5>ID : 001100</h5>
+    </div>
+    <div class="devider">
+      <hr>
+    </div>
+    <a href="#0" id="sd_bnt01">
+      <div class="sd_main_menu">
+        <img src="./Icon/shopping_bag_black_24dp.svg">
+        <span>주문내역</span>
+      </div>
+    </a>
+    <a href="#0" id="sd_bnt02">
+      <div class="sd_main_menu">
+        <img src="./Icon/inventory_2_black_24dp.svg">
+        <span>배송내역</span>
+      </div>
+    </a>
+    <a href="#0" id="sd_bnt03">
+      <div class="sd_main_menu">
+        <img src="./Icon/shopping_cart_black_24dp.svg">
+        <span>장바구니</span>
+      </div>
+    </a>
+    <div id="devider_1">
+      <hr>
+    </div>
+    <!-- 슬라이드 세부메뉴 : 슬라이드 이벤트-->
+    <div class="sd_detail_menu">
+      <a href="#0" id="sd_bnt04">
+        <div class="sd_detail_btn">
+          <img src="./Icon/info_black_24dp.svg">
+          <span>About</span>
+        </div>
+      </a>
+
+      <ul id="menubox04">
+        <li><a href="#0">'Anlak' 소개</a></li>
+        <li><a href="#0">경영이념</a></li>
+        <li><a href="#0">경영방침</a></li>
+        <li><a href="#0">채용안내</a></li>
+      </ul>
+
+    </div>
+    <div class="sd_detail_menu">
+      <a href="#0" id="sd_bnt05">
+        <div class="sd_detail_btn">
+          <img src="./Icon/category_black_24dp.svg">
+          <span>Product</span>
+        </div>
+      </a>
+
+      <ul id="menubox05">
+        <li><a href="#0">Chair</a></li>
+        <li><a href="#0">Table</a></li>
+        <li><a href="#0">Badroom</a></li>
+        <li><a href="#0">Interior</a></li>
+      </ul>
+
+    </div>
+    <div class="sd_detail_menu">
+      <a href="#0" id="sd_bnt06">
+        <div class="sd_detail_btn">
+          <img src="./Icon/celebration_black_24dp.svg">
+          <span>Promotion</span>
+        </div>
+      </a>
+
+      <ul id="menubox06">
+        <li><a href="#0">진행중인 이벤트</a></li>
+        <li><a href="#0">완료된 이벤트</a></li>
+        <li><a href="#0">프로모션</a></li>
+        <li><a href="#0">특가모음</a></li>
+      </ul>
+
+    </div>
+    <div class="sd_detail_menu">
+      <a href="#0" id="sd_bnt07">
+        <div class="sd_detail_btn">
+          <img src="./Icon/call_black_24dp.svg">
+          <span>Contact</span>
+        </div>
+      </a>
+
+      <ul id="menubox07">
+        <li><a href="#0">가맹점 문의</a></li>
+        <li><a href="#0">가맹점 대리 채용</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- wrap  -->
+  <div id="wrap">
+    <header>
+      <div id="gnb">
+        <a href="#test" id="hamburger"><span>&nbsp</span></a>
+        <h1>Anlak :</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#section2">About</a></li>
+          <li><a href="#section3">Product</a></li>
+          <li><a href="#section4">Promotion</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 섹션 1 -->
+    <section id="section1">
+      <h1 id="sc1_title">Anlak :</h1>
+      <div id="pc_front">
+        <div class="front_text">
+          <div>
+            <p>당신의 편안한 일상</p>
+            <p>안락이 함께 합니다</p>
+          </div>
+          <a href="#section2">Enter</a>
+        </div>
+        <div id="pc_front_overay"></div>
+        <video muted autoplay loop src="./Video/main.mp4"></video>
+
+      </div>
+      <div class="bxslider">
+        <img src="./IMG/Banner/banner5.png" alt="배너1">
+        <img src="./IMG/Banner/banner6.png" alt="배너1">
+        <img src="./IMG/Banner/banner7.png" alt="배너1">
+      </div>
+      <div>
+        <h2>추천상품</h2>
+        <div class="gall">
+          <div class="gall1">
+            <img src="./IMG/detailshot/furniture_detail (2).jpg" alt="가구">
+            <a href="#"><span>보러가기</span></a>
+          </div>
+          <div class="gall1">
+            <img src="./IMG/detailshot/furniture_detail (3).jpg" alt="가구">
+            <a href="#"><span>보러가기</span></a>
+          </div>
+          <div class="gall1">
+            <img src="./IMG/detailshot/furniture_detail (4).jpg" alt="가구">
+            <a href="#"><span>보러가기</span></a>
+          </div>
+          <div class="gall1">
+            <img src="./IMG/detailshot/furniture_detail (5).jpg" alt="가구">
+            <a href="#"><span>보러가기</span></a>
+          </div>
+          <div class="gall1">
+            <img src="./IMG/detailshot/furniture_detail (6).jpg" alt="가구">
+            <a href="#"><span>보러가기</span></a>
+          </div>
+          <div class="gall1">
+            <img src="./IMG/detailshot/furniture_detail (2).jpg" alt="가구">
+            <a href="#"><span>보러가기</span></a>
+          </div>
+          <div class="gall1">
+            <img src="./IMG/detailshot/furniture_detail (2).jpg" alt="가구">
+            <a href="#"><span>보러가기</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="boder_div"></div>
+
+
+    <!-- 섹션 2 -->
+    <section id="section2">
+      <div class="section2_title">
+        <h1>About</h1>
+        <hr>
+      </div>
+      <div id="cover_img"></div>
+      <div class="about_art">
+        <div id="about_bg"></div>
+        <!--z-index : 800-->
+        <div id="about_img1" data-aos="fade-right"></div>
+        <!--z-index : 810-->
+        <div id="about_text">
+          <!--z-index :820-->
+          <h1>Anlak</h1>
+          <p>안락</p>
+        </div>
+        <div id="about_text_2">
+          <div id="p">
+            <p>'Anlak' 은 고객님의</p>
+            <p>현대적이고 편안한</p>
+            <p>삶을 지향하는</p>
+            <p>가구 브랜드 입니다.</p>
+          </div>
+          <div id="h1">
+            <h1>삶을</h1>
+            <h1>디자인하다</h1>
+          </div>
+        </div>
+        <div id="about_img2" data-aos="fade-up"></div>
+        <!--z-index : 830-->
+      </div>
+    </section>
+    <div class="boder_div"></div>
+
+    <!--섹션 3: 프로덕트-->
+    <section id="section3">
+      <div id="sc3_title">
+        <h1>Product</h1>
+        <p>안락은 최고의 상품만을 만듭니다.</p>
+      </div>
+      <hr>
+      <div id="sc3_tab">
+        <div class="tabs">
+
+          <input id="chair" type="radio" name="tab_item" checked>
+          <label class="tab_item" for="chair">의자</label>
+
+          <input id="table" type="radio" name="tab_item">
+          <label class="tab_item" for="table">테이블</label>
+
+          <input id="bed" type="radio" name="tab_item">
+          <label class="tab_item" for="bed">침구</label>
+
+          <input id="int" type="radio" name="tab_item">
+          <label class="tab_item" for="int">인테리어</label>
+
+          <div class="tab_content" id="chair_content">
+            <div class=".contents_cover"></div>
+            <!-- 섹션3 : 탭 메뉴 구성-->
+            <div class="sc3_tab">
+              <!-- 썸네일 시작 -->
+              <div id="th_box">
+                <div class="production">
+                  <img src="./IMG/product/product (4).png" alt="상품">
+                  <img id="heart1" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (1).png" alt="상품">
+                  <img id="heart4" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (4).png" alt="상품">
+                  <img id="heart5" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (2).png" alt="상품">
+                  <img id="heart6" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (3).png" alt="상품">
+                  <img id="heart7" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (1).png" alt="상품">
+                  <img id="heart8" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (4).png" alt="상품">
+                  <img id="heart9" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (2).png" alt="상품">
+                  <img id="heart10" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (4).png" alt="상품">
+                  <img id="heart11" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (4).png" alt="상품">
+                  <img id="heart12" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+              </div>
+              <!-- 썸네일 끝 -->
+              <div id="sideB"></div>
+              <!--사이드 배너 -->
+            </div>
+          </div>
+          <!--  -->
+          <div class="tab_content" id="table_content">
+            <div class=".contents_cover"></div>
+            <!-- 섹션3 : 탭 메뉴 구성-->
+            <div class="sc3_tab">
+              <!-- 썸네일 시작 -->
+              <div id="th_box">
+                <div class="production">
+                  <img src="./IMG/product/product (4).png" alt="상품">
+                  <img id="heart1" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (2).png" alt="상품">
+                  <img id="heart2" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (2).png" alt="상품">
+                  <img id="heart5" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (3).png" alt="상품">
+                  <img id="heart6" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (1).png" alt="상품">
+                  <img id="heart7" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (4).png" alt="상품">
+                  <img id="heart8" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (2).png" alt="상품">
+                  <img id="heart9" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (3).png" alt="상품">
+                  <img id="heart10" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (1).png" alt="상품">
+                  <img id="heart11" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+                <!-- 썸네일 끝 -->
+                <!-- 썸네일 시작 -->
+                <div class="production">
+                  <img src="./IMG/product/product (2).png" alt="상품">
+                  <img id="heart12" alt="하트" src="./Icon/heart.svg">
+                  <h3>모던쿠션의자</h3>
+                  <p>₩ 25,000</p>
+                </div>
+              </div>
+              <!-- 썸네일 끝 -->
+              <div id="sideB"></div>
+              <!--사이드 배너 -->
+            </div>
+            <!--  -->
+            <div class="tab_content" id="bed_content">입니다</div>
+            <!--  -->
+            <div class="tab_content" id="int_content">쨔잔</div>
+          </div>
+          <div id="flexbox">
+            <div class="flexbox">
+              <div id="fb01"></div>
+              <div id="fb02"></div>
+              <div id="fb03"></div>
+              <div id="fb04"></div>
+              <div id="fb05"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--섹션 4: 프로모션-->
+      <section id="section4">
+        <img src="./IMG/Banner/banner 1.png">
+        <img src="./IMG/Banner/banner2.png">
+        <img src="./IMG/Banner/banner3.png">
+        <img src="./IMG/Banner/banner4.png">
+      </section>
+
+      <!--푸터-->
+      <footer id="footer">
+        <!--z-index: 700-->
+        <h2>Anlak : </h2>
+        <div class="footer_text">
+          <p>사업자번호 : 6654-1455-234</p>
+          <p>전화번호 : 123-4566-7890</p>
+          <p>문의메일 : asd11@asd.com</p>
+          <p>주 소 : 대구광역시 동구 용계동 229</p>
+        </div>
+        <img id="footer_logo" src="./IMG/ect/logo.png">
+        <!--z-index: 709-->
+        <div class="social">
+          <img src="./Icon/social/google.svg">
+          <img src="./Icon/social/instargram.svg">
+          <img src="./Icon/social/youtube.svg">
+          <img src="./Icon/social/twitter.svg">
+          <img src="./Icon/social/facebook.svg">
+        </div>
+      </footer>
+</body>
+
+</html>
+
+<!-- 스크롤 애니메이션 -->
+<script>
+  AOS.init();
+</script>
+
+<!-- 서서히 나타나는 항목들 -->
+<script>
+  window.onscroll = function() {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+      $('header').css("top", "0");
+    } else {
+      $('header').css("top", "-100px");
+    }
+
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+      $('.front_text a').css("opacity", "1");
+    } else {
+      $('.front_text a').css("opacity", "0.1");
+    }
+  }
+</script>
+
+<!-- 제이쿼리 함수(제작) -->
+<script>
+  $('.bxslider').bxSlider({
+    auto: true,
+    autoHover: true,
+  });
+
+  $('#hamburger').click(function() {
+    $('#slide').css("transform", "translateX(0)");
+    $('#slide_bg').css("display", "block");
+  });
+
+  $('#close_btn').click(function() {
+    $('#slide').css("transform", "translateX(-110%)");
+    $('#slide_bg').css("display", "none");
+  });
+
+  $('#slide_bg').click(function() {
+    $('#slide').css("transform", "translateX(-110%)");
+    $('#slide_bg').css("display", "none");
+  });
+
+  //하트  
+
+  $('.production img#heart1').click(function() {
+    $('.production img#heart1').toggleClass('heart');
+  });
+
+  $('.production img#heart2').click(function() {
+    $('.production img#heart2').toggleClass('heart');
+  });
+
+  $('.production img#heart3').click(function() {
+    $('.production img#heart3').toggleClass('heart');
+  });
+
+  $('.production img#heart4').click(function() {
+    $('.production img#heart4').toggleClass('heart');
+  });
+
+  $('.production img#heart5').click(function() {
+    $('.production img#heart5').toggleClass('heart');
+  });
+
+  $('.production img#heart6').click(function() {
+    $('.production img#heart6').toggleClass('heart');
+  });
+
+  $('.production img#heart7').click(function() {
+    $('.production img#heart7').toggleClass('heart');
+  });
+
+  $('.production img#heart8').click(function() {
+    $('.production img#heart8').toggleClass('heart');
+  });
+
+  $('.production img#heart9').click(function() {
+    $('.production img#heart9').toggleClass('heart');
+  });
+
+  $('.production img#heart10').click(function() {
+    $('.production img#heart10').toggleClass('heart');
+  });
+
+  $('.production img#heart11').click(function() {
+    $('.production img#heart11').toggleClass('heart');
+  });
+
+  $('.production img#heart12').click(function() {
+    $('.production img#heart12').toggleClass('heart');
+  });
+
+  //슬라이드 
+  $('#sd_bnt01').click(function() {
+    $('*').removeClass('sd_bnt_clicked');
+    $('#sd_bnt01').toggleClass('sd_bnt_clicked');
+    $('#menubox04,#menubox05,#menubox06,#menubox07').slideUp(500);
+  });
+
+  $('#sd_bnt02').click(function() {
+    $('*').removeClass('sd_bnt_clicked');
+    $('#sd_bnt02').toggleClass('sd_bnt_clicked');
+    $('#menubox04,#menubox05,#menubox06,#menubox07').slideUp(500);
+  });
+
+  $('#sd_bnt03').click(function() {
+    $('*').removeClass('sd_bnt_clicked');
+    $('#sd_bnt03').toggleClass('sd_bnt_clicked');
+    $('#menubox04,#menubox05,#menubox06,#menubox07').slideUp(500);
+  });
+
+  $('#sd_bnt04').click(function() {
+    $('*').removeClass('sd_bnt_clicked');
+    $('#sd_bnt04').toggleClass('sd_bnt_clicked');
+    $(this).next($('#menubox04')).slideDown(600);
+    $('#menubox05, #menubox06, #menubox07').slideUp(500);
+  });
+  $('#sd_bnt05').click(function() {
+    $('*').removeClass('sd_bnt_clicked');
+    $('#sd_bnt05').toggleClass('sd_bnt_clicked');
+    $('#menubox04,#menubox06,#menubox07').slideUp(500);
+    $(this).next($('#menubox05')).slideDown(600);
+  });
+  $('#sd_bnt06').click(function() {
+    $('*').removeClass('sd_bnt_clicked');
+    $('#sd_bnt06').toggleClass('sd_bnt_clicked');
+    $('#menubox04,#menubox05,#menubox07').slideUp(500);
+    $(this).next($('#menubox06')).slideDown(600);
+  });
+  $('#sd_bnt07').click(function() {
+    $('*').removeClass('sd_bnt_clicked');
+    $('#sd_bnt07').toggleClass('sd_bnt_clicked');
+    $('#menubox04,#menubox05,#menubox06').slideUp(500);
+    $(this).next($('#menubox07')).slideDown(600);
+  });
+</script>

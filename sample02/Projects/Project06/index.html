@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- 시계 캐러셀 적용 -->
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <!-- PC버전 시계 메인 캐러셀 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="./js/swiper-bundle.js"></script>
+    <!-- 히스토리 AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- 제이쿼리 적용 -->
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <!-- 내가 적용할 스타일시트는 맨 마지막에 -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="top">
+                <input type="checkbox" id="menuicon">
+                <label for="menuicon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="sidebar">
+
+                    <div id="sideLogo"><img src="./images/tab/tap_logo.png" alt=""></div>
+
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">HOME</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">COLLECTION</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">COMPANY</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">RETAIL</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">SERVICE</a>
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="side_line"></div>
+
+                </div>
+
+                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                        effect: "coverflow",
+                        direction: 'vertical',
+                        grabCursor: true,
+                        centeredSlides: true,
+                        slidesPerView: "auto",
+                        loop: true,
+                        coverflowEffect: {
+                            rotate: 1,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: false,
+
+                        },
+
+                    });
+                </script>
+
+                <div id="logo">
+                    <picture>
+                        <source srcset="./images/mobile/sinn_logo_PC.svg" media="(min-width: 768px)">
+                        <img src="./images/mobile/sinn_logo_mobile.svg" alt="logo image">
+                    </picture>
+                </div>
+                <div class="search"><a href="#"><img src="./images/mobile/search.svg" alt=""></a></div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="one"><a href="#">HOME</a></li>
+                    <li><a href="#COLLECTION">COLLECTION</a></li>
+                    <li><a href="#COMPANY">COMPANY</a></li>
+                    <li><a href="#RETAIL">RETAIL&SERVICE</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="main_video">
+        <video muted="" autoplay="" loop="" src="./videos/Sinn_main_0404.mp4"></video>
+    </section>
+
+    <div class="news_line">
+        <h1>News</h1>
+        <hr />
+    </div>
+
+    <section class="news">
+        <div class="news_1">
+            <p><a href="https://www.sinn.de/de/Termine/Schwetzingen_Juwelier_am_Schloss.htm" target='_blank'>2022/05/14
+                    Schwetzingen</a></p>
+            <p><a href="https://www.sinn.de/de/Termine/Wuppertal_Abeler.htm" target='_blank'>2022/05/21 Wuppertal</a>
+            </p>
+            <p><a href="https://www.sinn.de/de/Termine/Herford_Juwelier_Krueger.htm" target='_blank'>2022/06/03
+                    Herford</a> </p>
+        </div>
+        <div class="news_1">
+            <p><a href="https://www.sinn.de/de/Termine/Tecklenburg_Schwakenberg.htm" target='_blank'> 2022/06/09
+                    Tecklenburg</a></p>
+            <p><a href="https://www.sinn.de/de/Termine/Oberhausen_Uhren_Schmiemann.htm" target='_blank'>2022/06/14
+                    Oberhausen</a> </p>
+            <p><a href="https://www.sinn.de/de/Termine/Hamburg_Juwelier_Willer.htm" target='_blank'>2022/09/22
+                    Hamburg</a> </p>
+        </div>
+    </section>
+    <hr />
+    <section class="lineup" id="COLLECTION">
+        <img src="./images/PC/lineup.png" alt="">
+        <h1>LINE UP</h1>
+        <p>Our latest watches</p>
+        <a href="https://www.sinn.de/de/Kollektion.htm" target='_blank'>More</a>
+        <!-- PC버전 시계 메인 캐러셀 -->
+        <div class="box">
+            <div class="swiper PC_main">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide "><img src="./images/PC/Main_carousel_PC_watch01.png" alt=""></div>
+                    <div class="swiper-slide "><img src="./images/PC/Main_carousel_PC_watch02.png" alt=""></div>
+                    <div class="swiper-slide "><img src="./images/PC/Main_carousel_PC_watch03.png" alt=""></div>
+                    <div class="swiper-slide "><img src="./images/PC/Main_carousel_PC_watch04.png" alt=""></div>
+                    <div class="swiper-slide "><img src="./images/PC/Main_carousel_PC_watch05.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="lineup_ca">
+        <div><img src="./images/mobile/Mobile_carousel_01.png" alt=""></div>
+        <div><img src="./images/mobile/Mobile_carousel_02.png" alt=""></div>
+        <div><img src="./images/mobile/Mobile_carousel_03.png" alt=""></div>
+    </section>
+    <a href="https://www.sinn.de/de/Kollektion.htm" target='_blank' id="lineup_bt_PC">More</a>
+    <section class="lineup_ca_tab">
+        <div><img src="./images/tab/Main_banners_01.png" alt=""></div>
+        <div><img src="./images/tab/Main_banners_02.png" alt=""></div>
+        <div><img src="./images/tab/Main_banners_03.png" alt=""></div>
+        <div><img src="./images/tab/Main_banners_04.png" alt=""></div>
+        <div><img src="./images/tab/Main_banners_05.png" alt=""></div>
+        <div><img src="./images/tab/Main_banners_06.png" alt=""></div>
+        <div><img src="./images/tab/Main_banners_07.png" alt=""></div>
+        <div><img src="./images/tab/Main_banners_08.png" alt=""></div>
+        <div><img src="./images/tab/Main_banners_09.png" alt=""></div>
+    </section>
+    <a href="https://www.sinn.de/de/Sinn_Technologien.htm" target='_blank' id="lineup_bt">More</a>
+    <section class="sinn_watches">
+        <p>Sinn Watches</p>
+        <div class="sinn_watches_carousel">
+            <div><img src="./images/mobile/Main_Carousel_White01.png" alt=""></div>
+            <div><img src="./images/mobile/Main_Carousel_White02.png" alt=""></div>
+            <div><img src="./images/mobile/Main_Carousel_White03.png" alt=""></div>
+            <div><img src="./images/mobile/Main_Carousel_White04.png" alt=""></div>
+            <div><img src="./images/mobile/Main_Carousel_White05.png" alt=""></div>
+            <div><img src="./images/mobile/Main_Carousel_White06.png" alt=""></div>
+            <div><img src="./images/mobile/Main_Carousel_White07.png" alt=""></div>
+            <div><img src="./images/mobile/Main_Carousel_White08.png" alt=""></div>
+            <div><img src="./images/mobile/Main_Carousel_White09.png" alt=""></div>
+        </div>
+    </section>
+    <!-- 그리드 -->
+    <section class="sinn_grid">
+        <h1>Sinn Watches</h1>
+        <div class="grid">
+            <div class="sinn_grid_item"><img src="./images/PC/Grid_BigHight.png" alt="">
+                <div class="sinn_grid_item_overlay">
+                    <p class="sinn_grid_item_overlay__description">
+                        <span> See More</span>
+                    </p>
+                </div>
+            </div>
+            <div class="sinn_grid_item"><img src="./images/PC/Grid_01.png" alt="">
+                <div class="sinn_grid_item_overlay">
+                    <p class="sinn_grid_item_overlay__description">
+                        <span> See More</span>
+                    </p>
+                </div>
+            </div>
+            <div class="sinn_grid_item"><img src="./images/PC/Grid_04.png" alt="">
+                <div class="sinn_grid_item_overlay">
+                    <p class="sinn_grid_item_overlay__description">
+                        <span> See More</span>
+                    </p>
+                </div>
+            </div>
+            <div class="sinn_grid_item"><img src="./images/PC/Grid_02.png" alt="">
+                <div class="sinn_grid_item_overlay">
+                    <p class="sinn_grid_item_overlay__description">
+                        <span> See More</span>
+                    </p>
+                </div>
+            </div>
+            <div class="sinn_grid_item"><img src="./images/PC/Grid_03.png" alt="">
+                <div class="sinn_grid_item_overlay">
+                    <p class="sinn_grid_item_overlay__description">
+                        <span> See More</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sinn_grid2">
+        <h1>Sinn Watches</h1>
+        <div class="grid2">
+            <div class="sinn_grid_item2"><img src="./images/PC/Grid_Big.png" alt="">
+                <div class="sinn_grid_item2_overlay">
+                    <p class="sinn_grid_item2_overlay__description">
+                        <span> See More</span>
+                    </p>
+                </div>
+            </div>
+            <div class="sinn_grid_item2"><img src="./images/PC/Grid_01_2.png" alt="">
+                <div class="sinn_grid_item2_overlay">
+                    <p class="sinn_grid_item2_overlay__description">
+                        <span> See More</span>
+                    </p>
+                </div>
+            </div>
+            <div class="sinn_grid_item2"><img src="./images/PC/Grid_02_2.png" alt="">
+                <div class="sinn_grid_item2_overlay">
+                    <p class="sinn_grid_item2_overlay__description">
+                        <span> See More</span>
+                    </p>
+                </div>
+            </div>
+            <div class="sinn_grid_item2"><img src="./images/PC/Grid_03_2.png" alt="">
+                <div class="sinn_grid_item2_overlay">
+                    <p class="sinn_grid_item2_overlay__description">
+                        <span> See More</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 모바일, 태블릿 탭 메뉴 -->
+    <section class="sinn_tab">
+        <div class="tab_content">
+            <input type="radio" name="tabmenu" id="tab01" checked>
+            <label for="tab01">Women</label>
+            <input type="radio" name="tabmenu" id="tab02">
+            <label for="tab02">Men</label>
+
+            <div class="conbox_con1">
+                <a href="#"><img src="./images/mobile/watch_women_M_01.png" alt=""></a>
+                <a href="#"><img src="./images/mobile/watch_women_M_02.png" alt=""></a>
+                <a href="#"><img src="./images/mobile/watch_women_M_03.png" alt=""></a>
+            </div>
+            <div class="conbox_con2">
+                <a href="#"><img src="./images/mobile/Tab_Mobile_M1.png" alt=""></a>
+                <a href="#"><img src="./images/mobile/Tab_Mobile_M2.png" alt=""></a>
+                <a href="#"><img src="./images/mobile/Tab_Mobile_M3.png" alt=""></a>
+            </div>
+        </div>
+
+    </section>
+    <section class="sinn_message">
+        <h1>Sinn Message</h1>
+        <div class="sinn_message_grid">
+            <div class="one">One</div>
+            <div class="two">Two</div>
+            <div class="three">Three</div>
+            <div class="four">Four</div>
+            <div class="five">Five</div>
+            <div class="six">Six</div>
+        </div>
+    </section>
+
+    <!-- 영상2 -->
+    <section class="watch_Tests">
+        <h1>Tests and Certifications</h1>
+        <div class="watch_Tests_con">
+            <div class="watch_Tests_youtube">
+                <video muted="" autoplay="" loop="" src="./videos/Video_02.mp4"></video>
+            </div>
+            <div class="watch_Tests_text">
+                <h2>How do SINN </h2>
+
+                <p>watches react to</p>
+
+                <p> shocks </p>
+
+                <p>and</p>
+
+                <p> vibrations</p>
+
+                <div class="watch_Tests_text_but"><a href="https://www.sinn.de/de/Sinn_Technologien.htm"
+                        target='_blank'> see more</a></div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 태블릿, PC company history -->
+    <section class="history" id="COMPANY">
+        <h1>Our Company History</h1>
+        <p>Sinn Spezialuhren zu Frankfurt am Main</p>
+
+        <div class="history_contents">
+            <div class="history_contents_left"> 조종사였던 Helmut Sinn은<br />
+                Sinn을 설립했습니다</div>
+            <div class="circle">1961</div>
+            <div class="history_contents_right">회사 설립</div>
+            <div class="history_tablet">
+                <div>회사설립</div>
+                <div> Sinn의 회사 설립</div>
+                <div class="asdasd"></div>
+            </div>
+        </div>
+
+        <div class="history_contents">
+            <div class="history_contents_left">이 기술은 수중에서 김서림 <br />
+                방지나 압력 저항 등의최적의 <br />
+                내구성을 보장합니다</div>
+            <div class="circle">1996</div>
+            <div class="history_contents_right">HYDRO 기술 개발</div>
+            <div class="history_tablet">
+                <div>55주년</div>
+                <div>깊은 유서와 정통</div>
+                <div class="asdasd"></div>
+            </div>
+        </div>
+
+        <div class="history_contents">
+            <div class="history_contents_left">2016년이 되어 SINN은
+                <br />창립 55주년을 맞이 하였습니다</div>
+            <div class="circle">2016</div>
+            <div class="history_contents_right">Sinn Spezialuhren</div>
+            <div class="history_tablet">
+                <div>수상내역</div>
+                <div>독일 디자인 어워드 수상</div>
+
+            </div>
+        </div>
+        <div class="history_contents" id="h1c1">
+            <div class="history_contents_left">독일 디자인 어워드
+                <br /> '우수 제품 디자인 2022' 수상</div>
+            <div class="circle">2022</div>
+            <div class="history_contents_right">수상내역</div>
+            <div class="history_tablet">
+                <div>ㅁㄴㅇㄹ</div>
+                <div> asdasdsdasd</div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 모바일 company history -->
+    <div class="company_wrapper">
+        <div id="company_scroll_wrapper">
+            <div class="company_scroll" data-aos="fade-up" data-aos-duration="2000">
+                <p>1961 | Sinn 창립</p>
+            </div>
+            <div class="company_scroll" data-aos="fade-up" data-aos-duration="2000">
+                <p>1996 | HYDRO 기술개발 </p>
+            </div>
+            <div class="company_scroll" data-aos="fade-up" data-aos-duration="2000">
+                <p>2016 | Sinn 창립55주년</p>
+            </div>
+            <div class="company_scroll" data-aos="fade-up" data-aos-duration="2000">
+                <p>2022 | 디자인 어워드 수상</p>
+            </div>
+            <div class="company_scroll_text">
+                <p>SINN</p>
+                <p>당신의 시간에 가치를 더합니다</p>
+            </div>
+        </div>
+        <section class="company1">
+            <div class="company_img" data-aos="fade-up" data-aos-duration="2000">
+                <img src="./images/mobile/History_Mobile.png" alt="">
+            </div>
+
+            <div class="company_p">
+                <p><br />Our Company History</p>
+                <p>Sinn Spezialuhren zu Frankfurt am Main</p>
+            </div>
+
+        </section>
+    </div>
+    <section class="location" id="RETAIL">
+        <h1>Location</h1>
+        <div class="location_info">
+            <h4>Sinn Spezialuhren GmbH – Stammsitz<br />
+                Corporate Headquarters – Shop & Service<br />
+                Tell : +49699784140
+            </h4>
+        </div>
+        <div id="map">
+            <!-- 지도가 들어가는 영역! -->
+        </div>
+        <p>Tell : +49699784140</p>
+
+    </section>
+    <script type="text/javaScript">
+        function initMap() {
+             const map = new google.maps.Map(document.getElementById("map"), {
+                 zoom: 15,
+                 center: { lat: 50.110866429831894, lng: 8.682386715262997 }, // 지도의 중심 좌표
+                 
+                 
+             });
+        
+             // 마커 정보
+             var locations = [
+                    {testId: 'location01', lat: 50.110866429831894, lng: 8.682386715262997}
+             ];
+        
+             // 마커 생성
+             for (var i = 0; i < locations.length; i++) {
+                 var mapIcon = new google.maps.MarkerImage("./images/markerx2.png"); // 이미지 파일 경로를 설정해주면 다른 마커아이콘을 쓸 수 있음!
+                 var marker = new google.maps.Marker({
+                     map: map,
+                     position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+                 });
+        
+                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                     return function() {
+                         // 마커 클릭시 실행할 이벤트를 설정해줄 수 있다
+                        alert(locations[i].testId);
+                     }
+                 })(marker, i));
+             }
+        }
+        </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9qPcTMNeqDeqqldkjfYP122h7fMSrd8s&callback=initMap&libraries=&v=weekly"
+        async></script>
+
+    <footer>
+        <div class="footer_mb">
+            <p>개인정보취급방침</p>
+            <p>이용약관</p>
+            <p>회사소개</p>
+            <p>컬렉션</p>
+            <p>뉴스레터</p>
+        </div>
+        <div class="footer_mb_sns">
+            <p>Social Connect</p>
+            <img src="./images/mobile/sns (1).png" alt="">
+            <img src="./images/mobile/sns (2).png" alt="">
+            <img src="./images/mobile/sns (3).png" alt="">
+        </div>
+    </footer>
+
+    <section class="footer_pc">
+        <ul class="footer_menu">
+            <li>개인정보취급방침
+                <ul>
+                    <li><a href="https://www.sinn.de/de/Unternehmen.htm">서비스 이용정책</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                </ul>
+            </li>
+            <li>이용약관
+                <ul>
+                    <li><a href="#">이용약관안내</a></li>
+                </ul>
+            </li>
+            <li>회사소개
+                <ul>
+                    <li><a href="#">회사연혁</a></li>
+                    <li><a href="#">찾아오시는 길</a></li>
+                    <li><a href="#">위치 및 연락</a></li>
+                </ul>
+            </li>
+            <li>컬렉션
+                <ul>
+                    <li><a href="https://www.sinn.de/de/Instrumentelle_Uhren.htm">Instrument clocks</a></li>
+                    <li><a href="https://www.sinn.de/de/Taucheruhren.htm">diving watches</a></li>
+                    <li><a href="https://www.sinn.de/de/Klassische_Meisterwerke.htm">Classic masterpieces</a></li>
+                    <li><a href="https://www.sinn.de/de/Damenuhren.htm">ladies watches</a></li>
+                    <li><a href="https://www.sinn.de/de/Limitierte_Uhren.htm">Limited watches</a></li>
+                </ul>
+            </li>
+            <li>뉴스레터
+                <ul>
+                    <li><a href="https://www.sinn.de/de/Newsletter.htm">뉴스레터 구독</a></li>
+                    <li><a href="https://www.sinn.de/de/Kontakt_Werksverkauf.htm">Contact</a></li>
+                    <li><a href="https://www.sinn.de/de/Fachhaendler.htm">Specialist dealer </a></li>
+                    <li><a href="https://www.sinn.de/de/Katalogbuch_bestellen.htm">카탈로그 책</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="footer_sns">
+            <div><a href="https://www.instagram.com/sinn_spezialuhren/" target='_blank'><img
+                        src="./images/PC/sns (1).png" alt=""></a></div>
+            <div><a href="https://twitter.com/sinn_ffm" target='_blank'><img src="./images/PC/sns (2).png" alt=""></a>
+            </div>
+            <div><a href="https://www.facebook.com/sinnuhren" target='_blank'><img src="./images/PC/sns (3).png"
+                        alt=""></a> </div>
+
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

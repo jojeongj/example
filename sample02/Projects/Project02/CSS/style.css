@@ -1,0 +1,44 @@
+/* 폰트 */
+@font-face {
+    font-family: 'MinSans-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinSans-Thin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 초기화코드 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MinSans-Regular';
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: #283639;
+}
+li{
+    list-style: none;
+}
+
+.boder_div{
+    height: 50px;
+}
+
+@media screen and (min-width:1300px){
+    .boder_div{
+        height: 100px;
+    }
+}

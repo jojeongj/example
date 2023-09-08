@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap");
+
+.Modal_bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  display: none;
+}
+
+.Modal {
+  width: 30%;
+  min-width: 300px;
+  max-width: 500px;
+  height: 28%;
+  min-height: 200px;
+  max-height: 170px;
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(46, 46, 46, 0.5);
+}
+
+.Modal h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+  font-size: 1.25em;
+  letter-spacing: 0.2em;
+  position: fixed;
+  top: 5%;
+  width: 100%;
+  height: 14%;
+}
+
+.Md_divider {
+  position: fixed;
+  top: 50px;
+  background: #e2e2e2;
+  height: 1px;
+  width: 100%;
+}
+
+.Md_close {
+  position: fixed;
+  z-index: 999;
+  top: 3%;
+  right: 3%;
+  width: 24px;
+  height: 24px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.MD_text {
+  display: none;
+  width: 80%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1em;
+  line-height: 30px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.MD_ok {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Md_higlight {
+  position: relative;
+  display: inline-block;
+}
+
+.Md_higlight:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  display: inline-block;
+  background: #ffe176;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  z-index: -1;
+}

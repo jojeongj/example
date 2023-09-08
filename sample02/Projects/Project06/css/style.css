@@ -1,0 +1,1534 @@
+/* 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body {
+    background-color: #232323;
+}
+
+
+/* 토글 슬라이드 스타일 */
+header nav ul>li:nth-of-type(1) a {
+    font-weight: 600;
+    color: #BFAF8F;
+}
+
+.sidebar .swiper {
+    width: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 500px;
+
+}
+
+.sidebar .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    display: block;
+    text-align: center;
+
+}
+
+.sidebar .swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.sidebar .swiper-slide a {
+    font-size: 30px;
+    color: #fff;
+}
+
+.sidebar .swiper-slide-active a {
+    opacity: 1;
+    color: #BFAF8F;
+    font-weight: 900;
+}
+
+#sideLogo {
+    height: 150px;
+    width: 100%;
+    background-color: #151515;
+    text-align: center;
+    padding-top: 40px;
+    border-bottom: 1px solid #BFAF8F;
+}
+
+.side_line {
+    margin-top: 100px;
+    height: 50px;
+    border-top: 1px solid #BFAF8F;
+}
+
+/* 헤더 */
+header {
+    width: 100%;
+    padding-top: 24px;
+    background-color: #151515;
+}
+
+header #top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+}
+
+/* 사이드메뉴 */
+input[id="menuicon"] {
+    display: none;
+}
+
+input[id="menuicon"]+label {
+    display: block;
+    width: 24px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    margin-left: 16px;
+}
+
+input[id="menuicon"]+label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 30px;
+    background: #BFAF8F;
+    transition: all .35s;
+}
+
+input[id="menuicon"]+label span:nth-child(1) {
+    top: 0;
+}
+
+input[id="menuicon"]+label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[id="menuicon"]+label span:nth-child(3) {
+    bottom: 0;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(1) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+label span:nth-child(2) {
+    opacity: 0;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(3) {
+    bottom: 50%;
+    right: 0;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+.sidebar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+    transition: all .35s;
+    background-color: #000;
+}
+
+input[id="menuicon"]:checked+label+div {
+    left: 0;
+}
+
+.sidebar ul {
+    margin-top: 300px;
+}
+
+/* 토글메뉴 */
+#top #toggle img {
+    width: 30px;
+    margin-left: 17px;
+}
+
+#top>div {
+    margin-right: 17px;
+}
+
+/* 로고 */
+#logo {
+    margin: 50px;
+}
+
+#top #logo img {
+    width: 200px;
+    margin-left: -17px;
+}
+
+/* 검색메뉴 */
+.search a img {
+    width: 30px;
+}
+
+/*상단 메뉴 */
+header .menu {
+    display: none;
+}
+
+/* 메인 비디오 */
+.main_video {
+    background-color: #232323;
+    position: relative;
+}
+
+.main_video video {
+    height: 100%;
+    width: 100%;
+}
+
+/* 시계 캐러셀 */
+.main_ca {
+    height: 600px;
+}
+
+/* 뉴스 */
+.news {
+    padding: 25px 0;
+    background: #232323;
+}
+
+.news_line {
+    margin-top: 20px;
+}
+
+.news_line h1 {
+    font-size: 1.7em;
+    color: #BFAF8F;
+    font-weight: 500;
+    letter-spacing: 6px;
+    background: #232323;
+    padding-left: 5%;
+}
+
+.news_line hr:nth-of-type(1) {
+    width: 75%;
+    height: 1px;
+    background-color: #BFAF8F;
+    border: 0;
+    float: right;
+    margin-right: 0;
+    margin-top: -17px;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #BFAF8F;
+    border: 0;
+    margin-top: 15px;
+}
+
+.news_1 {
+    font-size: 1.1em;
+    color: #F1F0EE;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+.news_1 p {
+    margin: 5px;
+    padding-left: 5%;
+}
+
+.news_1 a {
+    color: white;
+}
+
+.news_1:last-child {
+    display: none;
+}
+
+/* 라인업 */
+.lineup {
+    background: #232323;
+}
+
+.lineup img,
+.lineup a {
+    display: none;
+}
+
+.lineup h1 {
+    margin-top: 50px;
+    margin-left: 5%;
+    color: #BFAF8F;
+    font-size: 1.7em;
+    font-weight: 500;
+}
+
+.lineup p {
+    color: #B4B4B4;
+    margin-left: 5%;
+    margin-top: 10px;
+    font-size: 1.3em;
+}
+
+a#lineup_bt_PC {
+    display: none;
+}
+
+.box {
+    display: none;
+}
+
+/* 라인업 캐러셀 */
+.lineup_ca img {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.lineup_ca_tab,
+.lineup_ca_PC {
+    display: none;
+}
+
+/*라인업*/
+.line {
+    height: 3px;
+    width: 400px;
+    background-color: #696151;
+}
+
+/* 메인 캐러셀 PC */
+.main_ca {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main_ca h1 {
+    color: #696151;
+    font-size: 50px;
+}
+
+a#lineup_bt {
+    display: none;
+}
+
+/* Sinn Watches */
+.sinn_watches {
+    font-size: 2em;
+    text-align: center;
+    color: #BFAF8F;
+    margin-top: 100px;
+}
+
+/* sinn watches */
+.sinn_watches_carousel img {
+    margin: 15px;
+}
+
+.sinn_watches_carousel {
+    margin-top: 30px;
+}
+
+/* 그리드 메뉴 */
+.sinn_grid,
+.sinn_grid2 {
+    display: none;
+}
+
+/*모바일 탭 메뉴 */
+.sinn_tab {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.tab_content {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.tab_content label {
+    margin-bottom: 50px;
+}
+
+.conbox_con1 img,
+.conbox_con2 img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    display: inline-block;
+    padding: 10px;
+    margin: 55px 14%;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    letter-spacing: 4px;
+}
+
+input[type="radio"]:checked+label {
+    color: #BFAF8F;
+    border-bottom: 2px solid #BFAF8F;
+}
+
+.conbox_con1,
+.conbox_con2 {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+}
+
+input[id="tab01"]:checked~.conbox_con1 {
+    display: block;
+}
+
+input[id="tab02"]:checked~.conbox_con2 {
+    display: block;
+}
+
+/* histoty */
+.history {
+    display: none;
+}
+
+/* company history */
+.company_wrapper {
+    margin-top: 210px;
+}
+
+.company1 {
+    height: 600px;
+    background: url(../images/mobile/company_mobile.jpeg) center;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    margin-top: -530px;
+}
+
+.company_scroll {
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    background: rgba(146, 145, 145, 0.808);
+    border-radius: 0 15px 0 15px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.company_scroll p {
+    padding-left: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.company_scroll_text {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    letter-spacing: 6px;
+}
+
+.company_img {
+    z-index: -99;
+}
+
+.company_img img {
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+}
+
+.company1 .company_p {
+    width: 96%;
+    height: 575px;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.company_p p:first-child {
+    color: white;
+    font-size: 1.7em;
+    letter-spacing: 6px;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.company_p p:last-child {
+    color: white;
+    opacity: 0.4;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+/* sinn message */
+.sinn_message {
+    display: none;
+}
+
+/* 지도 */
+#map {
+    width: 100%;
+    height: 500px;
+}
+
+.location {
+    height: 563px;
+    background: #232323;
+}
+
+.location h1 {
+    padding: 30px;
+    text-align: center;
+    font-size: 2.1em;
+    letter-spacing: 6px;
+    color: #BFAF8F;
+    font-weight: normal;
+}
+
+.location p {
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.541);
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 1.2em;
+    position: absolute;
+    z-index: 999;
+    margin-top: -50px;
+}
+
+.location_info {
+    display: none;
+}
+
+/* 푸터 모바일 */
+footer {
+    height: 250px;
+    background-color: #151515;
+    color: #fff;
+}
+
+.footer_mb {
+    margin-top: 41px
+}
+
+.footer_mb p {
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+.footer_mb p:first-child {
+    font-size: 1.2em;
+    padding-top: 20px;
+    color: #BFAF8F;
+}
+
+.footer_mb_sns {
+    float: right;
+    margin-right: 25px;
+    margin-top: -20px;
+    font-size: 1.2em;
+
+}
+
+.footer_mb_sns p {
+    margin-bottom: 10px;
+}
+
+.footer_mb_sns img {
+    margin-right: 5px;
+}
+
+.footer_pc {
+    display: none;
+}
+
+.watch_Tests {
+    display: none
+}
+
+@media screen and (min-width:768px) {
+
+    /* 태블릿 헤더 */
+    header nav {
+        padding-bottom: 18px;
+    }
+
+    /* 태블릿 뉴스 */
+    .news {
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        margin-left: 10%;
+        margin-left: 30px;
+    }
+
+    .news_line h1 {
+        padding-left: 5%;
+    }
+
+    .news_line {
+        margin-top: 20px;
+    }
+
+    .news_1 {
+        width: 100%;
+    }
+
+    .news_1 p {
+        padding-left: 16%;
+    }
+
+    .news_line hr:nth-of-type(1) {
+        width: 82%;
+    }
+
+    /* 태블릿 라인업 캐러셀 */
+    .lineup_ca {
+        display: none;
+    }
+
+    .lineup_ca_tab {
+        display: block;
+        margin-left: 3%;
+        margin-top: 30px;
+    }
+
+    .lineup_ca_tab img {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    /* 태블릿 라인업 버튼 */
+    a#lineup_bt {
+        display: block;
+        color: #BFAF8F;
+        text-align: center;
+        padding: 4px;
+        border: 1px solid #BFAF8F;
+        width: 125px;
+        margin: 0 auto;
+        margin-top: 70px;
+        font-size: 1.3em;
+        letter-spacing: 3px;
+        opacity: 0.5;
+    }
+
+    /* 태블릿  Sinn Watches */
+    .sinn_watches {
+        display: none;
+    }
+
+    /*태블릿 탭 메뉴 */
+    .sinn_tab {
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    .tab_content {
+        width: 100%;
+    }
+
+    .tab_content label {
+        margin-bottom: 50px;
+    }
+
+    .conbox_con1 img,
+    .conbox_con2 img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="radio"]+label {
+        display: inline-block;
+        padding: 10px;
+        margin: 55px 16%;
+        color: #fff;
+        font-size: 1.6em;
+        cursor: pointer;
+        letter-spacing: 5px;
+    }
+
+    input[type="radio"]:checked+label {
+        color: #BFAF8F;
+        border-bottom: 2px solid #BFAF8F;
+    }
+
+    .conbox_con1,
+    .conbox_con2 {
+        width: 100%;
+        margin: 0 auto;
+        display: none;
+    }
+
+    input[id="tab01"]:checked~.conbox_con1 {
+        display: block;
+    }
+
+    input[id="tab02"]:checked~.conbox_con2 {
+        display: block;
+    }
+
+    /* 태블릿 company history */
+    .company1,
+    .company_wrapper {
+        display: none;
+    }
+
+    .company1 div {
+        width: 96%;
+        height: 575px;
+        border: 1px solid #fff;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+    }
+
+    .company1 div p:first-child {
+        color: white;
+        font-size: 1.7em;
+        letter-spacing: 6px;
+        text-align: right;
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+
+    .company1 div p:last-child {
+        color: white;
+        opacity: 0.4;
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+
+    .company2 div {
+        display: none;
+    }
+
+    /*태블릿  sinn message */
+    .sinn_message {
+        display: none;
+    }
+
+
+
+    /* 태블릿 history */
+    .history {
+        display: block;
+        height: 1430px;
+        text-align: center;
+        padding-top: 220px;
+        background: url("../images/tab/History_768.png") center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .history h1 {
+        color: #BFAF8F;
+        font-size: 3em;
+        font-weight: normal;
+        letter-spacing: 6px;
+    }
+
+    .history p {
+        color: #BFAF8F;
+        font-size: 1.2em;
+        font-weight: normal;
+        letter-spacing: 6px;
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+
+    .history_contents {
+        height: 260px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .history_contents .circle {
+        border: 15px solid #ada491;
+        border-radius: 1000px;
+        height: 191px;
+        width: 191px;
+        font-size: 2.2em;
+        color: #BFAF8F;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .history_contents_left {
+        color: #fff;
+        font-size: 2em;
+        order: 1;
+        display: none;
+    }
+
+    .history_contents_right {
+        color: #BFAF8F;
+        font-size: 2em;
+        display: none;
+    }
+
+    #h1c1 {
+        display: none;
+    }
+
+    /* 태블릿 지도 */
+    #map {
+        height: 400px;
+    }
+
+    .location p {
+        display: none;
+    }
+
+    .location_info {
+        display: block;
+        height: 150px;
+    }
+
+    .location_info h4 {
+        width: 100%;
+        height: 150px;
+        color: #fff;
+        background: #333333;
+        line-height: 30px;
+        padding-top: 30px;
+        text-align: center;
+        letter-spacing: 4px;
+        font-size: 1.2em;
+        font-weight: normal;
+
+    }
+
+    /* 태블릿 푸터 */
+    footer {
+        margin-top: 90px;
+        height: 350px;
+        background-color: #151515;
+        color: #fff;
+    }
+
+    .footer_mb {
+        padding-top: 20px;
+    }
+
+    .footer_mb p {
+        margin-top: 13px;
+        padding-left: 25px;
+    }
+
+    .footer_mb p:first-child {
+        font-size: 1.2em;
+        padding-top: 20px;
+    }
+
+    .footer_mb_sns {
+        float: right;
+        margin-right: 25px;
+        margin-top: -20px;
+        font-size: 1.2em;
+
+    }
+
+    .footer_mb_sns p {
+        margin-bottom: 10px;
+    }
+
+    .footer_mb_sns img {
+        margin-right: 5px;
+    }
+
+    .tri {
+        width: 500px;
+        height: 200px;
+        border-right: 100px solid #888;
+        border-bottom: 100px solid transparent;
+    }
+
+    .history_tablet {
+        font-size: 2.1em;
+        margin-left: 20%;
+        text-align: right;
+        color: white;
+    }
+
+    .history_tablet div:first-child {
+        color: #BFAF8F;
+    }
+
+    .history_tablet div:last-child {
+        color: #fff;
+    }
+
+    .history_contents {
+        position: relative;
+    }
+
+    .asdasd {
+        width: 94px;
+        border-right: 7px solid #ada491;
+        position: absolute;
+        height: 95px;
+        bottom: -18%;
+        left: 0;
+    }
+}
+
+@media screen and (min-width:1300px) {
+
+    /*  PC 버전 토글 */
+    header #top span {
+        display: none;
+    }
+
+    /* PC 버전 로고 */
+    #logo {
+        margin-top: 80px;
+        position: absolute;
+        left: 40px;
+    }
+
+    /* PC 버전 상단메뉴 */
+    header .menu {
+        height: 25px;
+        background: #151515;
+        display: block;
+    }
+
+    header .menu ul {
+        float: left;
+        margin-top: -28px;
+        margin-left: 30%;
+    }
+
+    header>nav ul>li {
+        float: left;
+        font-size: 15px;
+    }
+
+    header>nav ul>li>a {
+        display: block;
+        padding: 10px 40px;
+        color: white;
+    }
+
+    .menu .one a {
+        color: #BFAF8F;
+        font-weight: 600;
+    }
+
+    /* PC 버전 검색메뉴 */
+    .search a img {
+        display: none;
+    }
+
+    body {
+        background: #151515;
+    }
+
+    /* PC 버전 시계 캐러셀 */
+    .main_ca {
+        height: 600px;
+    }
+
+    /* PC 버전 뉴스 */
+    .news {
+        width: 100%;
+        margin: 0;
+        background: #232323;
+        height: 180px;
+        margin-bottom: -25px;
+    }
+
+    .news_line {
+        padding-top: 20px;
+        background: #232323;
+        margin-top: 0;
+    }
+
+    .news_1 {
+        background: #232323;
+    }
+
+    .news h1 {
+        font-size: 2.2em;
+        margin-top: -22px;
+        color: #BFAF8F;
+        font-weight: 500;
+        letter-spacing: 6px;
+    }
+
+    .news_1 {
+        font-size: 1.1em;
+        color: #F1F0EE;
+        font-weight: 300;
+        letter-spacing: 6px;
+    }
+
+    .news_1 a {
+        color: #fff;
+    }
+
+    .news_1:first-child {
+        margin-left: 10%;
+    }
+
+    .news_1:last-child {
+        display: block;
+    }
+
+    hr {
+        width: 100%;
+        height: 1px;
+        background-color: #BFAF8F;
+        border: 0;
+        margin-top: -15px;
+    }
+
+    /* PC버전 시계 메인 캐러셀 */
+    .box {
+        display: block;
+    }
+
+    .swiper {
+        width: 1000px;
+        padding-top: 170px;
+        margin: 0 auto;
+        z-index: 1;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-slide {
+        opacity: 0.4;
+    }
+
+    .swiper-slide-active+.swiper-slide {
+        opacity: 1;
+    }
+
+    /* PC버전 lineup 캐러셀 */
+    .lineup {
+        text-align: center;
+        background-image: url("../images/PC/Main_carousel_BG.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 900px;
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 30px;
+    }
+
+    .lineup>img {
+        display: block;
+        margin: 0 auto;
+        width: 40px;
+        padding-top: 70px;
+    }
+
+    .lineup h1 {
+        margin: 20px 50px;
+        color: #BFAF8F;
+        font-size: 2.2em;
+        font-weight: 500;
+        letter-spacing: 6px;
+    }
+
+    .lineup p {
+        display: none;
+    }
+
+    .lineup a {
+        border: 2px solid #BFAF8F;
+        padding: 10px 55px;
+        color: #BFAF8F;
+        font-size: 1.7em;
+    }
+
+    a#lineup_bt {
+        display: none;
+    }
+
+    a#lineup_bt_PC {
+        display: block;
+        color: #BFAF8F;
+        padding: 10px;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid #BFAF8F;
+        width: 175px;
+        margin: 0 auto;
+        margin-bottom: 90px;
+        font-size: 1.7em;
+        letter-spacing: 3px;
+
+    }
+
+    /* PC버전  라인업*/
+    .line {
+        height: 3px;
+        width: 400px;
+        background-color: #696151;
+    }
+
+    .main_ca {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .main_ca h1 {
+        color: #696151;
+        font-size: 50px;
+    }
+
+    /*  PC버전  탭 메뉴 제거 */
+    .sinn_tab {
+        display: none;
+    }
+
+    /* PC버전  sinn watches 그리드 */
+    .sinn_grid {
+        display: block;
+        background: #232323;
+    }
+
+    .sinn_grid h1 {
+        color: #BFAF8F;
+        font-size: 4em;
+        font-weight: 500;
+        letter-spacing: 6px;
+        text-align: center;
+        margin-top: 200px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .grid {
+        display: grid;
+        margin: 0 auto;
+        width: 1239px;
+        height: 900px;
+        grid-gap: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 400px);
+    }
+
+    .sinn_grid_item:first-child {
+        grid-row: 1 / span 2;
+    }
+
+    .sinn_grid_item {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .sinn_grid_item_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+
+    .sinn_grid_item_overlay:hover {
+        opacity: 1;
+    }
+
+    .sinn_grid_item_overlay span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        font-size: 2em;
+    }
+
+    .sinn_grid_item_overlay span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .sinn_grid_item_overlay:hover span {
+        padding-right: 25px;
+    }
+
+    .sinn_grid_item_overlay:hover span:after {
+
+        opacity: 1;
+        right: 0;
+    }
+
+    /*  PC버전  영상 2 */
+    .watch_Tests {
+        display: block;
+        height: 1200px;
+        padding-top: 170px;
+        background-color: #151515;
+    }
+
+    .watch_Tests h1 {
+        font-size: 4.3em;
+        letter-spacing: 6px;
+        font-weight: normal;
+        text-align: center;
+        color: #BFAF8F;
+        margin-bottom: 150px;
+    }
+
+    .watch_Tests_con {
+        display: flex;
+        width: 100%;
+    }
+
+    .watch_Tests_youtube {
+        background-color: #000;
+        width: 70%;
+        height: 800px;
+    }
+
+    .watch_Tests_youtube video {
+        width: 100%;
+        height: 800px;
+    }
+
+    .watch_Tests_text {
+        text-align: center;
+        padding-top: 100px;
+        width: 30%;
+        background-color: #333333;
+        color: #fff;
+        height: 800px;
+    }
+
+    .watch_Tests_text h2 {
+        margin-top: 30px;
+        font-size: 2.5em;
+        letter-spacing: 6px;
+
+    }
+
+    .watch_Tests_text p {
+        margin-top: 30px;
+        font-size: 2.1em;
+        font-weight: normal;
+        letter-spacing: 4px;
+
+    }
+
+    .watch_Tests_text_but {
+
+        margin: 0 auto;
+        border: 1px solid #BFAF8F;
+        border-radius: 30px;
+        width: 250px;
+        height: 56px;
+        font-size: 1.7em;
+        line-height: 45px;
+        margin-top: 100px;
+    }
+
+    .watch_Tests_text_but a {
+        color: #BFAF8F;
+        letter-spacing: 6px;
+        font-weight: normal;
+    }
+
+    /* PC버전  history */
+    .history {
+        display: block;
+        height: 2700px;
+        text-align: center;
+        background-image: url("../images/PC/History_1400.png");
+    }
+
+    .history h1 {
+        color: #BFAF8F;
+        font-size: 4em;
+    }
+
+    .history p {
+        color: #BFAF8F;
+        font-size: 1.5em;
+    }
+
+    .history_contents {
+        height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 260px;
+    }
+
+    .history_contents:nth-of-type(2n) .circle {
+        border: 15px solid #dedede3d;
+    }
+
+    .history_contents .circle {
+        border: 14px solid #BFAF8F;
+        border-radius: 1000px;
+        height: 200px;
+        width: 200px;
+        font-size: 3em;
+        color: #BFAF8F;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .history_contents_left {
+        display: block;
+        color: #fff;
+        order: 0;
+        font-size: 2em;
+        width: 40%;
+        margin-right: 30px;
+    }
+
+    .history_contents_right {
+        display: block;
+        color: #BFAF8F;
+        font-size: 2.5em;
+        width: 35%;
+    }
+
+    .history_tablet {
+        display: none;
+    }
+
+    .history_contents:last-child {
+        display: flex;
+    }
+
+    #h1c1 {
+        display: flex;
+    }
+
+    /* PC버전  푸터 */
+    footer {
+        height: 500px;
+        background-color: burlywood;
+        display: none;
+    }
+
+    .footer_pc {
+        height: 500px;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding-top: 60px;
+        margin-top: 90px;
+    }
+
+    .footer_menu {
+        display: flex;
+        width: 80%;
+        white-space: nowrap;
+    }
+
+    .footer_menu li:first-child {
+        color: #BFAF8F;
+    }
+
+    .footer_menu ul {
+        margin-top: 7px;
+    }
+
+    .footer_menu>li {
+        width: 100%;
+        color: #fff;
+        display: block;
+    }
+
+    .footer_menu>li a {
+        display: block;
+        color: rgb(177, 177, 177);
+        padding: 7px 0;
+    }
+
+    .footer_sns {
+        display: flex;
+        position: absolute;
+        bottom: 15%;
+        width: 80%;
+    }
+
+    .footer_sns>div {
+        padding-right: 20px;
+    }
+
+    .tri {
+        width: 500px;
+        height: 200px;
+        border-right: 100px solid #888;
+        border-bottom: 100px solid transparent;
+    }
+
+}
+
+@media screen and (min-width:1600px) {
+
+    /*  sinn watches 그리드 */
+    .sinn_grid {
+        display: none;
+    }
+
+    .sinn_grid2 {
+        display: block;
+    }
+
+    .sinn_grid2 h1 {
+        color: #BFAF8F;
+        font-size: 4em;
+        font-weight: 500;
+        letter-spacing: 6px;
+        text-align: center;
+        margin-top: 200px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .grid2 {
+        display: grid;
+        margin: 0 auto;
+        width: 1590px;
+        height: 1026px;
+        grid-gap: 0;
+        grid-auto-rows: 510px;
+    }
+
+    .sinn_grid_item2:first-child {
+        grid-column: 1 / span 3;
+    }
+
+    .sinn_grid_item2:first-child img {
+        width: 100%;
+    }
+
+    .sinn_grid_item2 {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .sinn_grid_item2_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 513px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+
+    .sinn_grid_item2_overlay:hover {
+        opacity: 1;
+    }
+
+    .sinn_grid_item2_overlay span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        font-size: 2em;
+    }
+
+    .sinn_grid_item2_overlay span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .sinn_grid_item2_overlay:hover span {
+        padding-right: 25px;
+    }
+
+    .sinn_grid_item2_overlay:hover span:after {
+
+        opacity: 1;
+        right: 0;
+    }
+
+    .history {
+        height: 2800px;
+        background-image: url("../images/PC/History_1920.png");
+    }
+
+}

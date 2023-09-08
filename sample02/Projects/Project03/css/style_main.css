@@ -1,0 +1,1412 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+    padding: 0;      margin: 0;       box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+}
+
+a { color: white; text-decoration: none; }
+
+section a {color: black;}
+
+#greeting {
+    color: #444444;
+}
+
+.hidden {
+    display: none;
+}
+/* -------------------------------------------------------- 모바일모드 메뉴 */
+
+#headerWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.6s;
+    width: 100%;
+    z-index: 999999;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    /* border: 1px solid black; */
+}
+
+#headerWrap.sticky {
+    background: white;
+}
+
+#headerWrap > div {
+    margin: auto 15px;
+}
+
+#mainLogo {
+    margin-top: 20px;
+    width: 140px;
+    height: 21px;
+    background: url(../img/logo_w.png) center;
+    background-size: cover;
+    transition: 0.6s;
+}
+
+#headerWrap.changecolor #mainLogo {
+    width: 140px;
+    height: 21px;
+    background: url(../img/logo_b.png) center;
+    background-size: cover;
+}
+
+svg#call_but {width: 42px; height: 402x; transition: 0.6s;}
+
+.st0 {fill:none;stroke:#ffffff;stroke-width:1.5;stroke-miterlimit:10;}
+
+#headerWrap.changecolor .st0 { stroke: black; }
+
+
+
+
+/* -------------------------------------------------------- 타블렛모드 메뉴 */
+@media screen and (min-width:768px){
+
+    div#headerWrap {
+        height: 80px;
+    }
+
+    #mainLogo {
+        margin-top: 30px;
+        width: 180px;
+        height: 27px;
+        background: url(../img/logo_w.png) center;
+        background-size: cover;
+        transition: 0.6s;
+    }
+
+    #headerWrap.changecolor #mainLogo {
+        width: 180px;
+        height: 27px;
+        background: url(../img/logo_b.png) center;
+        background-size: cover;
+    }
+    
+    /* svg#call_but {width: 40px; height: 40px; transition: 0.6s;} */
+}
+
+
+
+/* --------------------------------------------------- 슬라이드 메뉴 */
+nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    z-index: 100;
+    height: 100%;
+    transition: .8s;
+}
+
+nav ul#main_menu {
+    position: absolute;
+    left: -100%;
+    transition: .6s;
+    z-index: 100;
+    background: white;
+    border: 1px solid #efefef;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul#main_menu.on, nav.on {
+    transition: .6s;
+    left: 0;
+    z-index: 50;
+    
+}
+nav li {
+    line-height: 36px;    
+    border-top: 1px solid #efefef;
+}
+
+nav li#blank {
+    height: 60px;
+}
+
+nav a {
+    display: block; /* 중요 */
+    color: #616161;
+    padding: 0 15px;
+}
+
+nav .snd_menu { 
+    background: #efefef; 
+    display: none;
+}
+
+nav .selec { 
+    background: #3071F2; 
+    color: #efefef; 
+    
+}
+
+nav li:nth-child(3) > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav li:nth-child(3) ul > div {
+    width: 50%;
+}
+
+
+@media screen and (min-width: 768px) {
+    nav li#blank {
+        height: 80px;
+        transition: 0.6s;
+     }
+}
+
+
+
+
+/* ----------------------------------------- 슬라이드 메뉴 버튼 */
+
+#slideButton {
+    position: relative;
+    width: 30px;
+    height: 25px;
+}
+
+#slideButton span {    
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    transition: all .5s;
+    z-index: 100;
+}
+
+#headerWrap.changecolor #slideButton span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 30px;
+    background-color: rgb(82, 82, 82);
+    transition: all .5s;
+    z-index: 100;
+}
+
+a#toggle {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#slideButton span:nth-child(1){
+    top: 0px;
+}
+
+#slideButton span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#slideButton span:nth-child(3){
+    bottom: 0px;    
+}
+
+
+/* ---------------------------------------------- 슬라이드 메뉴 버튼 변화 */
+#slideButton #toggle.on  span:nth-child(1) {
+    background-color: rgb(82, 82, 82);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+#slideButton #toggle.on  span:nth-child(2) {
+    background-color: rgb(82, 82, 82);
+    opacity: 0;
+}
+
+#slideButton #toggle.on  span:nth-child(3) {
+    background-color: rgb(82, 82, 82);
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------- 웹모드 메뉴 */
+
+#webHeader {display: none;}
+
+@media screen and (min-width: 1200px) {
+
+    #headerWrap {
+        display: none;
+    }
+
+    #webHeader {
+        z-index: 999999;
+        display: block;
+        height: 125px;
+        /* border: 2px solid coral; */
+        position: fixed;
+        width: 100%;
+        transition: 0.6s;
+        overflow: hidden; /* 하위메뉴 숨김 */
+    }
+
+    #webHeader:hover { 
+        background: white;
+        box-shadow: 0 0 1px 2px rgba(128, 128, 128, 0.173);
+    }
+
+    #webHeader:hover a{
+        color: #000;
+    }
+
+    #webHeader.change {
+        background: rgb(255, 255, 255);
+    }
+
+    #webHeader.changecolor a {
+        color: black;
+    }
+
+    #webLogo {
+        width: 300px; 
+        height: 45px;
+        position: absolute;
+        top: 60px;
+        left: 13%; /* 좌우여백 */
+        background: url("../img/logo_w.png") center;
+        background-size: cover;
+    }
+
+    #webHeader:hover #webLogo {
+        background: url("../img/logo_b.png") center;
+        background-size: cover;
+    }
+
+    #webHeader.changecolor #webLogo {
+        background: url("../img/logo_b.png") center;
+        background-size: cover;
+    }
+
+    #webHeader .kbschool {
+        margin: 6px 0;
+        /* border: 1px solid coral; */
+        width: 130px; 
+        height: 13px;
+        background: url("../img/kb_w.png") center;
+        background-size: cover;
+    }
+
+    #webHeader.changecolor .kbschool {
+        background: url("../img/kb_b.png") center;
+        background-size: cover;
+        opacity: 0.6;
+    }
+    
+    #webHeader:hover .kbschool {
+        background: url("../img/kb_b.png") center;
+        background-size: cover;
+        opacity: 0.5;
+    }
+
+    #webLogin > ul {
+        /* border: 1px solid blue; */
+        position: absolute;
+        font-size: 0.9em;
+        top: 5px;
+        right: 14%; /* 좌우여백 */
+        display: flex;
+        cursor: pointer;
+      
+    }
+
+    /* #webLogin > ul > li {
+        border-left: 1px solid rgb(255, 255, 255);
+        padding-left: 10px;
+        margin-right: 10px;
+    } */
+
+    #webHeader #webLogin > ul > li > a {
+        font-size: 0.9em;
+    }
+
+    /*
+    #webLogin > ul > li:first-child {
+        border: none;
+    } 
+
+    #webHeader.changecolor #webLogin > ul > li {
+        border-left: 1px solid gray;
+    }*/
+    #webHeader #webLogin > ul > li  {
+        color: rgb(255, 255, 255);
+        font-size: 0.9em;
+    }
+    #webHeader:hover #webLogin >ul >li#greeting {
+        color: gray;
+        font-size: 0.9em;    
+    }
+
+    #webHeader.changecolor #webLogin > ul > li  {
+        color: gray;
+        font-size: 0.9em;
+    }
+
+    #webHeader.changecolor #webLogin > ul > li > a {
+        color: gray;
+        font-size: 0.9em;
+    }
+
+    #webHeader.changecolor #webLogin > ul > li:first-child {
+        border: none;
+    }
+
+    #webGnb {
+        position: absolute;
+        top: 75px;
+        right: 13%; /* 좌우여백 */
+        width: 70%;
+        /* border: 1px solid blue; */
+    }
+
+    #webGnb > ul {
+        display: flex;
+        justify-content: end;
+    }
+
+    #webGnb > ul > li {
+        width: 10%;
+        text-align: center;
+    }
+
+    #webGnb > ul > li a:hover {
+        border-bottom: 2px solid #3071F2;
+    }
+
+    /* 나중에
+     #webGnb > ul > li a::after {
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 5px;
+        left: 50%;
+        bottom:0;
+        background-color: #3071F2;
+        transition: all ease-in-out .2s;
+      } */
+
+
+
+    #webGnb > ul > li > a {
+        font-size: 1.3em;
+        /* border: 1px solid coral; */
+        display: block;
+        margin-bottom: 22px;
+    }
+
+    
+    .lnb {
+        border-right: 1px solid rgba(194, 194, 194, 0.562);
+        
+     }
+
+     #lastlnb {
+         border-right: none;
+     }
+
+
+    .lnb > li {        
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .lnb > li {
+        font-size: 16px;
+    }
+
+}
+
+
+
+/* ------------------------------------------ 모달 */
+.modal {
+    position: fixed;
+    /* 바탕의 스크롤을 막음 */
+    top: 0;
+    left: 0;
+    right: 0; 
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    background: rgba(196, 196, 196, 0.508);
+    z-index: 99999999;
+}
+
+@media screen and (min-width: 1200px) {
+
+.modal.show {
+    display: block;
+}
+
+.modal_body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 400px;
+    height: 400px;    
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(34, 36, 38, 0.138);
+    padding-top: 30px;
+}
+
+
+/* -------------- 로그인 폼 -------------- */
+
+form {
+    margin: 0 auto;
+    
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) */
+} 
+fieldset {
+    border: 0.1px solid rgba(129, 129, 129, 0);
+    width: 345px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+legend {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+div.login_box {
+    margin: 0 auto;
+    /* border: 1px solid coral; */
+    /* display: flex; */
+    width: 260px;
+    font-size: 0.8em;
+}
+input[type="text"], input[type="password"] {
+    border: 1px solid #a3a3a3;
+    border-radius: 2px;
+    height: 22px;
+    width: 98%;
+    margin: 4px 0;
+}
+input[type="checkbox"] {
+    margin-bottom: 12px; 
+    font-size: 0.9em;
+}
+button#loginBut {
+    border: 1px solid #BCBABA;
+    border-radius: 2px;
+    background: #BCBABA;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    padding: 8px 0;
+}
+div.login_textbox {
+    text-align: center;
+}
+div.login_textbox p {
+    font-size: 0.8em;
+    margin-top: 30px;
+    color: black;
+}
+
+div.login_textbox p a {
+    color: black;
+}
+img.sns_login {
+    width: 40px;
+    height: auto;
+    margin: 20px 10px 0 10px;
+}
+
+.modal_body > img {
+    width: 40px;
+    display: block;
+    margin: 0 auto 20px auto;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------- 온라인 접수 ------ 본문 */
+
+#wrapBox {
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 5px 2px rgb(197, 197, 197);
+    border-radius: 30px;
+    width: 350px;
+    display: flex;
+    margin: 40px auto;
+}
+
+#wrapBox > div {
+    /* border: 1px solid coral; */
+    padding: 6px 5px 0 5px;
+    margin: 0 auto;
+}
+
+#wrapBox > div:last-child {
+    display: none;
+}
+
+#wrapBox > div > a {
+    display: flex;
+}
+
+#wrapBox > div h3 {
+    margin-top: 10px;
+}
+
+#wrapBox > div > a p {
+    display: none;
+}
+
+#wrapBox img.icon1 {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #wrapBox {
+        width: 520px;
+        height: 100px;
+        border-radius: 50px;
+        margin: 50px auto;
+    }
+    #wrapBox img.icon1 {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+    #wrapBox > div {
+        padding: 10px 5px 0 5px;
+        margin: 0 auto;
+    }
+    #wrapBox > div h3 {
+        font-size: 1.3em;
+        margin: 10px 0 2px 0;
+    }
+    #wrapBox > div > a p {
+        display:block;
+        color: #888888;
+    }
+    
+    #wrapBox > div > a p > svg {
+        vertical-align: bottom;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    #wrapBox > div:last-child {
+        display: block;
+        margin-right: 20px;
+    }
+    #wrapBox {
+        width: 800px;
+        height: 118px;
+        border-radius: 100px;
+        margin: 80px auto;
+    }
+    #wrapBox img.icon1 {
+        width: 100px;
+        height:100px;
+        margin-right: 10px;
+    }
+    #wrapBox > div {
+        padding: 8px 5px 0 5px;
+        margin: 0 auto;
+    }
+    #wrapBox > div h3 {
+        font-size: 1.5em;
+        margin: 20px 0 2px 0;
+    }
+
+}
+
+
+
+
+
+
+
+/* ---- 여백조절 등 공통부분 -------------------------------------- */
+.container {
+    /* border: 1px solid rgb(255, 0, 200); */
+    padding: 40px 15px; 
+}
+
+#present, #job {
+    background: #F2F2F2;
+}
+
+.title {
+    position: relative;
+}
+
+.title > h2 {
+    margin-bottom: 8px;
+}
+.title > p {
+    margin-bottom: 20px;
+    color: #959494;
+}
+.title > a {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;    
+}
+
+.title > a > p {
+    color: #4B4B4B;
+}
+
+.title > a p > svg {
+    vertical-align: bottom;
+    fill: #4B4B4B;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 70px 32px; 
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 80px 15%; 
+    }
+    .title > h2 {
+        margin-bottom: 8px;
+        font-size: 1.6em;
+    }
+
+}
+
+
+
+/* -------------------------------- 현재모집과정 --- 본문 */
+
+.present {
+    width: 70%;
+    margin-left: 16%;
+    /* border: 1px solid black; */
+  }
+
+.present_cs > .swiper-wrapper > .swiper-slide {
+    height: auto;
+}
+
+.present_cs {
+    overflow: hidden;
+}
+
+.present >.swiper   {
+    /* border: 1px solid blue; */
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    }
+    
+    .present_cs > .swiper-wrapper > .swiper-slide {
+    /* border: 1px solid red; */
+    background-position: center;
+    background-size: cover;
+    /* width: 300px;  크기조절 어떻게 하나 */
+    /* height: 100%; */
+    box-shadow: 2px 2px 10px 5px rgba(29, 29, 29, 0.2);
+    }
+    
+
+     
+    .tab_content { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        width: 100%;
+        margin-bottom : 20px;
+        /* border: 1px solid coral; */
+    }
+
+
+    input[type="radio"] {display: none;}
+    input[type="radio"] +label {
+        white-space: nowrap;
+        text-align: center;
+        
+        width: 25%;
+        padding: 10px;
+        margin-bottom: 10px;
+        /* border: 1px solid coral; */
+        border-radius: 30px;
+        color: rgb(0, 0, 0); font-size: 14px; cursor: pointer;}
+    input[type="radio"]:checked + label {color: white; background: #007bff;}
+
+
+
+    /* 캐러셀호버 글박스 스타일링 */
+
+    .card {
+        /* width: fit-content; */
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .card img {
+        display: block;
+        overflow: hidden;
+        width: 100%; /* 가로크기 조절 어떻게 하나 */
+        height: 100%;
+        /* object-fit: cover;  */    
+        /* border-radius: 10px; */
+        transition: .5s;
+    }
+
+    .intro {
+        position: absolute;
+        bottom: 0;
+        background: rgb(255, 255, 255);
+        height: 30%; /* 흰박스 높이 */
+        width: 100%;
+        padding: 10px;
+        transition: .5s; /* 스무스~ */
+    }
+
+    .card .intro .moreBox {
+        margin-top: 20px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s; /* 스무스~ */
+    }
+    
+    @media screen and (min-width:768px) {
+        input[type="radio"] {display: none;}
+        input[type="radio"] +label {
+            white-space: nowrap;
+            text-align: center;
+            margin: 0 15px;
+            width: 15%; 
+            padding: 10px 0;
+            margin-bottom: 10px;
+            /* border: 1px solid coral; */
+            border-radius: 30px;
+            color: rgb(0, 0, 0); font-size: 18px; cursor: pointer;}
+        input[type="radio"]:checked + label {color: white; background: #007bff;}
+
+        .intro {
+            padding: 20px;
+        }
+    }
+
+    @media screen and (min-width:1200px) {  
+
+    .card:hover .intro .moreBox a {
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+    }
+
+
+
+
+    /* 호버 */
+
+    .card:hover .intro {            
+        height: 100%;
+        background: rgba(0, 0, 0, 0.687);
+        color: white;
+        transition: .5s; /* 스무스~ */
+    }
+
+    .card:hover .intro .moreBox {
+        font-size: 1.2em;
+        visibility: visible;
+        opacity: 0.8;
+        transition: .3s; /* 스무스~ */
+    }
+
+    .card:hover img {
+        transform: scale(1.1);
+        transition: .3s;
+    }
+
+    .card:hover .intro .moreBox a {
+        visibility: visible;
+        opacity: 1;
+        transition: .3s;
+
+        display: block;
+        color: white;
+        background: rgb(45, 175, 255);
+        margin: 15px auto;
+        text-align: center;
+        width: 200px;
+        border-radius: 30px;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* -------------------------------- 홍보영상 --- 본문 */
+
+
+#promotion .video {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 50%;
+
+}
+#promotion .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#promotion .proBr, #promotion #goCh {
+    display: none;
+}
+
+#addVideo {
+    display: none;
+}
+
+
+@media screen and (min-width: 1200px) {
+    #promotion {
+        display: flex;
+        width: 100%;
+    }
+    #promotion > div:nth-child(1) {
+        width: 50%
+    }
+    #promotion > div:nth-child(2) {
+        width: 50%;
+        margin-left: 15px;
+    }
+
+    #addVideo {
+        display: block;
+        position: absolute;
+        bottom: 0;        
+    }
+
+    #addVideo p {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    #addVideo p a {
+        color: #888888;
+    }
+
+    #addVideo svg {
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+    }
+
+    #promotion > .title > a {
+        display: none;
+    }
+
+    #addVideo button {
+        cursor: pointer;
+        /* border: 1px solid blue; */
+        margin: 0 5px 0 0;
+        border: 1px solid white;
+        background: white;
+    }
+
+    #addVideo button img {
+        display: block;
+        border-radius: 5px;
+        width: 120px;
+        height: auto;
+    }
+
+    @media screen and (min-width: 1400px) {
+        #addVideo button img {
+            width: 150px;
+            height: auto;
+        }
+    }
+
+    @media screen and (min-width: 1650px) {
+        #addVideo button img {
+            width: 180px;
+            height: auto;
+        }
+    }
+
+    #promotion > .title > a {
+        display: none;
+    }
+
+    .vid-content{
+        display: none;  
+        padding: 15px 0;
+        border-top:3px solid #eee;
+    }
+    .vid-content.picked{
+        /* inherit : 부모객체의 값을 가져옴 */
+        display: inherit;
+    }
+
+
+
+}
+
+
+
+
+/* -------------------------------- 포트폴리오 --- 본문 */
+
+
+#tab-1 .port_first {
+    background: url("../img/contents/port/port_1.png") center;
+    background-size: cover;
+}
+
+#tab-1 .port_second {
+    background: url("../img/contents/port/port_2.png") center;
+    background-size: cover;
+}
+
+#tab-2 .port_first {
+    background: url("../img/contents/port/port_3.png") center;
+    background-size: cover;
+}
+
+#tab-2 .port_second {
+    background: url("../img/contents/port/port_4.png") center;
+    background-size: cover;
+}
+#tab-3 .port_first {
+    background: url("../img/contents/port/port_5.png") center;
+    background-size: cover;
+}
+
+#tab-3 .port_second {
+    background: url("../img/contents/port/port_6.png") center;
+    background-size: cover;
+}
+#tab-4 .port_first {
+    background: url("../img/contents/port/port_7.png") center;
+    background-size: cover;
+}
+
+#tab-4 .port_second {
+    background: url("../img/contents/port/port_8.png") center;
+    background-size: cover;
+}
+#tab-5 .port_first {
+    background: url("../img/contents/port/port_9.png") center;
+    background-size: cover;
+}
+
+#tab-5 .port_second {
+    background: url("../img/contents/port/port_10.png") center;
+    background-size: cover;
+}
+#tab-6 .port_first {
+    background: url("../img/contents/port/port_11.png") center;
+    background-size: cover;
+}
+
+#tab-6 .port_second {
+    background: url("../img/contents/port/port_12.png") center;
+    background-size: cover;
+}
+
+
+
+
+#butBox {
+    text-align: center;
+}
+
+#butBox > button {    
+    border: 1px solid #3071F2; 
+    width: 100px;
+    margin: 7px 10px;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 1em;
+    background: white;
+}
+
+#butBox > button.current {
+    background: #3071F2;
+    color: white
+}
+
+.tab-content {
+    display: none;  
+    /* border-top:3px solid rgb(255, 0, 0); */
+}
+
+.tab-content div {
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+
+@media screen and (min-width: 768px) {
+    #portfolio .contents {
+        /* border: 1px solid coral; */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #butBox {
+        /* border: 3px dashed red; */
+        text-align: left;
+        width: 20%;
+        padding-top: 10px;
+    }
+
+    #butBox > button {
+        width: 130px;
+        margin: 10px 0;
+        margin-right: 20px;
+        border-radius: 30px;
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    #protBox {
+        /* border: 3px solid blue; */
+        width: 80%
+    }
+
+    #protBox .tab-content {
+        /* border: 5px solid green; */
+        display: none;
+    }
+
+    #protBox .tab-content.current{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #protBox .tab-content a {
+        /* border: 3px dashed tomato; */
+        display: block;
+        width: 49%;
+    }
+
+    #protBox .tab-content a > div {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------- 채용&후기 --- 본문 */
+
+#recruit {
+    border: 1px solid rgba(255,255,255,0);
+}
+
+#recruit .re_memo {
+    border-bottom: 1px solid #808080;
+    background: white;
+    height: 50px;
+    line-height: 47px;
+    padding-left: 10px;
+}
+
+#recruit .re_memo:first-child {
+    background: #3071F2;
+    border-radius: 20px 20px 0 0;
+}
+#recruit .re_memo:last-child {
+    border-bottom: 1px solid #ffffff;
+    border-radius: 0 0 20px 20px;
+}
+
+/* -------------------- */
+
+#interview {
+    margin-top: 60px;
+    border: 1px solid rgba(255,255,255,0);
+}
+#interview .person img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    
+}
+#interview .inter_box {
+    border: 1px solid #80808000;
+    border-radius: 30px;
+    background: white;
+    display: flex;
+    height: 60px;
+    padding: 3px 0 0 5px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#interview .inter_box:last-child {
+    margin-bottom: 0;
+}
+
+#interview .inter_box div:nth-of-type(2) {
+    color: #929292;
+    /* border: 1px solid coral; */
+    max-width: 80%;
+    display: block;
+    /* 말 줄임표 뭐더랑 */
+    white-space: nowrap; /* 텍스트가 영역을 넘치도록 놔둠*/
+    overflow: hidden; /* 넘치는 부분을 숨김 */
+    text-overflow: ellipsis;  /* 말줄임표 */
+}
+
+#interview .inter_box div b {
+    color: black;
+}
+
+#interview .inter_box div mark {
+    background: none;
+    color: #929292;
+    font-size: 14px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    #recruit .re_memo {
+        padding-left: 20px;
+    }
+
+    #interview .inter_box {
+        border-radius: 50px;
+        height: 80px;
+        padding: 3px 0 0 5px;
+        margin-bottom: 15px;
+    }
+    #interview .person img {
+        height: 70px;
+        width: 70px;
+        margin-right: 10px;
+    }
+    #interview div:nth-of-type(2) {
+        margin-top: 10px;
+    }
+
+    #interview div b {
+        font-size: 1.2em;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    #job {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #job > div {
+        width: 48%;
+    }
+
+    #interview {
+        margin-top: 0;
+    }
+    
+    #interview .inter_box {
+        height: 90px;
+        padding: 8px 8px 0 10px;
+    }
+
+    #interview div p {
+        font-size: 1.05em;
+    }
+
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------- 푸터 */
+footer {
+    bottom: 0;
+    background: #0C0A24;
+    color: white;
+    margin-top: 60px;
+    padding: 0 15px;
+}
+
+footer div.logo_footer {
+    padding: 35px 0;
+}
+
+footer div.logo_footer img {
+    width: 200px;
+    height: 30px;
+}
+
+footer div.adress_footer p {
+    margin-bottom: 10px;
+}
+
+footer div.sns_footer {
+    padding: 20px 0 55px 0;
+}
+
+footer div.sns_footer img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+
+@media screen and (min-width: 768px) {
+    footer {
+        padding: 0 32px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    footer { 
+        padding: 0 15%; 
+        margin-top: 120px;
+    }
+
+    footer > div {margin: 0 auto;}
+}
+
+
+/* ------------------------------------------ 챗봇 탑버튼 */
+
+div#top {
+    position: fixed;
+    z-index: 999;
+    bottom: 10%;
+    right: 3%;
+    /* border: 1px solid rgb(218, 218, 218); */
+    box-shadow: 0 0 1px 2px rgba(226, 226, 226, 0.5);
+    border-radius: 50px;
+    padding: 5px 5px 2px 5px;
+    background: rgba(255, 255, 255, 0.5);
+}
+img#chat_bot {
+    height: 40px;
+    width: 40px;
+}
+
+svg#top_but {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    
+svg#top_but {
+    display: block;
+    height: 40px;
+    width: 40px;
+    transform: rotate( 90deg );
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+}
